@@ -1,0 +1,52 @@
+<div class="row m-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header head-main">
+                <h2>Agregar lentes de contacto</h2>
+            </div>
+            <div class="card-body">
+                <form class="m-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row pb-4 text-center">
+                                <label for="nombre" class="w-50">Nombre:</label>
+                                <input type="text" id="nombre" class="w-50">
+                            </div>
+                            <div class="row pb-4 text-center">
+                                <label for="marca" class="w-50">Marca</label>
+                                <input type="text" id="marca" class="w-50">
+                            </div>
+                            <div class="row pb-4 text-center">
+                                <label for="color" class="w-50">Color</label>
+                                <input type="text" id="color" class="w-50">
+                            </div>
+                            <div class="row pb-4 text-center">
+                                <label for="queratometria" class="w-50">Queratometr&iacute;a</label>
+                                <input type="text" id="queratometria" class="w-50">
+                            </div>                          
+                            <div class="row pb-4 text-center">
+                                <label for="estatus" class="w-50">Estatus</label>
+                                <input type="text" id="estatus" class="w-50">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row ps-4">
+                                <label for="descripcion">Fotografia</label>
+
+                            </div>
+                            <div class="row ps-4 pt-2">
+                                <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+                                    <input type="file" name="imagen1" />                
+                                </form>
+                            </div>
+                            <br><br><br><br>
+                            <div class="row mt-lg-5 justify-content-center">
+                                <button type="button" style="background-color: #d9d9d9" class="btn btn-primary text-black w-25" onclick="alertaAgregar();">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

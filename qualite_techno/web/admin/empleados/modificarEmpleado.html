@@ -1,0 +1,89 @@
+<div class="row m-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header head-main">
+                <h2>Modificar  empleado</h2>
+            </div>
+            <div class="card-body">
+                <form class="m-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row pb-4 text-center">
+                                <label for="nombre" class="w-50">Nombre:</label>
+                                <input type="text" id="nombre" class="w-50">
+                            </div>
+                            <div class="row pb-4 text-center">
+                                <label for="apellidoPaterno" class="w-50">Apellido Paterno:</label>
+                                <input type="text" id="apellidoPaterno" class="w-50">
+                            </div>
+                            <div class="row pb-4 text-center">
+                                <label for="apellidoMaterno" class="w-50">Apellido Materno:</label>
+                                <input type="text" id="apellidoMaterno" class="w-50">
+                            </div>
+                            
+                            <div class="row pb-4 text-center">
+                            <label for="genero" class="w-50">G&eacute;nero:</label>
+                            <select name="Genero" id="Genero" class="w-50">
+                             <option value="m">Masculino</option>
+                             <option value="f">Femenino</option>
+                             <option value="u">Otro</option>
+                            </select>
+                            </div>
+                            
+                            
+                            <div class="row pb-4 text-center">
+                                <label for="rfc" class="w-50">RFC:</label>
+                                <input type="text" id="rfc" class="w-50">
+                            </div>
+                            
+                            <div class="row pb-4 text-center">
+                                <label for="correo" class="w-50">Correo:</label>
+                                <input type="text" id="correo" class="w-50">
+                            </div>
+                            <div class="row pb-4 text-center">
+                                <label for="telefonoM" class="w-50">Tel&eacute;fono m&oacute;vil:</label>
+                                <input type="text" id="telefonoMovil" class="w-50">
+                            </div>
+                            <div class="row pb-4 text-center">
+                                <label for="telefonoCasa" class="w-50">Tel&eacute;fono de casa:</label>
+                                <input type="text" id="telefonoCasa" class="w-50">
+                            </div>
+                            
+                            <div class="row pb-4 text-center">
+                            <label for="estatus" class="w-50">Eastatus:</label>
+                            <select name="Estatus" id="Estatus" class="w-50">
+                             <option value="a">Activo</option>
+                             <option value="i">Inactivo</option>
+                            </select>
+                            </div>
+                            
+                        </div>
+                        <div class="col-6">
+                            
+                                <div class="row ps-4">
+                                <label for="descripcion">Clave &Uacute;nica: </label>
+                                 <input type="text" id="clave" class="w-50">
+                                  <button type="button" style="background-color: #d9d9d9" class="btn btn-primary text-black w-25" >G&eacute;nerar clave</button>
+                            </div>
+                                <div class="row ps-4">
+                                <label for="usuaario" class="w-50">Usuario:</label>
+                                <input type="text" id="usuario" class="w-50">
+                            </div>
+                            <div class="row ps-4">
+                                <label for="contraseña" class="w-50">Contraseña:</label>
+                                <input type="text" id="contraseña" class="w-50">
+                            </div>
+                            
+                            <br><br><br><br>
+                            <div class="row mt-lg-5 justify-content-right">
+                                <button type="button" style="background-color: #d9d9d9" class="btn btn-primary text-black w-25" onclick="alertaModificarE();">Modificar</button>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,111 @@
+.imgLogo
+{
+    width: 100px;
+    height: 100px;
+}
+.imgTxtLogo
+{
+    width: 120px;
+    height: 120px;
+}
+.contenidoPrincipal
+{
+    background-color: #c9f0ff;
+}
+.head
+{
+    background-color: #09979d;
+}
+.barra
+{
+    background-color: #1d7582;
+}
+.boton-barra
+{
+    width: 100%;
+    color:white;
+}
+
+
+.titulo-menu
+{
+    font-size: 10px;
+}
+
+.tabla
+{
+    background-color: #09979d;
+    color: white;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;  
+    top:0;
+    left: 95%;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1d7582;
+    color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;  
+    top:100;
+}
+
+.dropdown-content a
+{
+    color: white;
+    display: block;
+}
+
+
+
+.dropdown-content a:hover
+{
+    background-color: #09979d;
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    margin-top: 0; 
+ }
+ 
+.dropdown:hover .btn {
+  background-color: #09979d;
+  font-weight: bold;
+  color: white;
+}
+
+.head-main
+{
+    background: #30c0d4;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.cierre
+{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+    margin-top: 15px;
+    margin-left: 450px; 
+}
+
