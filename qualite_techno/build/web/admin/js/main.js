@@ -604,7 +604,7 @@ function cargarModuloArmazones()
     .then(datos => {
                         // insertamos el codigo HTML dentro del contenedor principal
                         document.getElementById('contenedor_principal').innerHTML = datos;
-            
+                        // Se agrego este import para cada modulo
                         import('./armazones.js')
                         .then(obj => {
                             cm = obj;
@@ -612,6 +612,7 @@ function cargarModuloArmazones()
                         });
                     });
 }
+
 function cargarModuloArmazonesAgregar()
 {
     fetch('armazones/agregarArmazones.html')
@@ -629,6 +630,7 @@ function cargarModuloArmazonesAgregar()
                         });
                     });
 }
+
 function cargarModuloArmazonesModificar()
 {
     fetch('armazones/modificarArmazones.html')
