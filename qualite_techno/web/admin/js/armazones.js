@@ -3,7 +3,7 @@ let armazones =    [
                                 idProducto      : 1,
                                 idArmazon       : 1,
                                 codigoDeBarras  : 1,
-                                nombre          : "Armazon de pasta",
+                                nombre          : "Armazon de madera",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
                                 color           : "Negro",
@@ -85,12 +85,12 @@ export function setDetalleVisible(valor)
         document.getElementById('divListadoArmazones').style.display = "";
     }
 }
-export function mostrarDetalleArmazon(idArmazon)
+export function mostrarDetalleArmazon(idProducto)
 {
     let i = -1;
     
     //Buscamos la posicion del Armazon
-    i = buscarPosiconPorId(idArmazon);
+    i = buscarPosiconPorId(idProducto);
     
     if(i > 0)
     {
@@ -114,7 +114,6 @@ export function mostrarDetalleArmazon(idArmazon)
         //Activamos los botones de eliminar y actualizar, y desactivamos el de agregar
         document.getElementById("btnEliminar").classList.remove("disabled");
         document.getElementById("btnActualizar").classList.remove("disabled");
-        document.getElementById("btnAgregar").classList.add("disabled");
     }
     else
         alert('Armazon no encontrado');
@@ -149,38 +148,42 @@ export function buscarPosiconPorId(id)
         //Si llegamos hasta aqui significa que no encontramos el id buscamos el 
     return -1;
 }
-/* export function agregarArmazones()
+export function agregarArmazon()
 {
     //Declaramos una variable temporal para saber la posicion del armazon
     let pos = -1;
     
     //Definimos artributos y valores del accesorio
     let armazon =   {
-                        idArmazon = 0,
-                        codigoDeBarras = 0,
-                        nombre = document.getElementById("txtNombre").value,
-                        marca = document.getElementById("txtMarca").value,
-                        modelo = document.getElementById("txtModelo").value,
-                        color = document.getElementById("txtColor").value,
-                        dimensiones = document.getElementById("txtDimensiones").value,
-                        precioCompra = parseFloat(document.getElementById("txtPrecioCompra").value),
-                        precioVenta = parseFloat(document.getElementById("txtPrecioVenta").value),
-                        existencias = parseFloat(document.getElementById("txtExistencias").value),
-                        descripcion = document.getElementById("txtDescripcion").value
+                        idProducto : 0,
+                        idArmazon : 0,
+                        codigoDeBarras : 0,
+                        nombre : document.getElementById("txtNombre").value,
+                        marca : document.getElementById("txtMarca").value,    
+                        modelo : document.getElementById("txtModelo").value,
+                        color : document.getElementById("txtColor").value,
+                        dimensiones : document.getElementById("txtDimensiones").value,
+                        precioCompra : parseFloat(document.getElementById("txtPrecioCompra").value),
+                        precioVenta : parseFloat(document.getElementById("txtPrecioVenta").value),
+                        existencias : parseFloat(document.getElementById("txtExistencias").value),
+                        estatus : "Activo",
+                        descripcion : document.getElementById("txtDescripcion").value,   
                     }
     if(document.getElementById("txtCodigoDeBarras").value.trim() === '')
     {
      
         //Generamos un ID para el armazon a partir de los milisegundos 
         //de la fecha actual
-        armazon.idArmazon = Date.now();
-        armazon.codigoDeBarras = '' + Date.now() + 1;
+        armazon.idProducto = Date.now();
+        armazon.idArmazon = Date.now() + 1 ;
+        armazon.codigoDeBarras = '' + Date.now() + 2;
         
         //Insertamos el accesorio al final del arreglo
         armazones[armazones.length] = armazon;
         
         //Colocamos los IDs generados en las cajas de textos para 
         //evitar duplicados
+        document.getElementById("txtIdProducto").value = armazon.idProducto;
         document.getElementById("txtCodigoDeBarras").value = armazon.codigoDeBarras;
         document.getElementById("txtIdArmazon").value = armazon.idArmazon;
         
@@ -193,6 +196,7 @@ export function buscarPosiconPorId(id)
     else
     {
         //Si el armazon ya tiene un ID, lo tomamos para actualizar sus datos:
+        armazon.idProducto = parseInt(document.getElementById("txtIdProducto").value);
         armazon.idArmazon = parseInt(document.getElementById("txtIdArmazon").value);
         armazon.codigoDeBarras = parseInt(document.getElementById("txtCodigoDeBarras").value);
         
@@ -205,14 +209,14 @@ export function buscarPosiconPorId(id)
             armazones[pos] = armazon;
             
             //Mostramos un mensaje al usuario
-            alert('Datos del accesorio actualizados correctamente.');
+            swal("Producto actualizado", "Se actualizo correctamente el producto", "success");;
             
             //Actualizamos la tabla
             fillTable();
         }
         else
         {
-            alert('Erro: armazon no encontrado')
+            swal("Error: armazon no encontrado", "warning")
         }
     }
         
@@ -223,7 +227,7 @@ export function eliminarArmazon()
     if(document.getElementById("txtCodigoDeBarras").value !== '')
     {
         //Buscamos la posicion del accesorio
-        pos = buscarPosicionPorId(parseInt(document.getElementById("txtCodigoDeBarras").value));
+        pos = buscarPosicionPorId(parseInt(document.getElementById("idProducto").value));
         
         if(pos >= 0)
         {
@@ -244,4 +248,4 @@ export function eliminarArmazon()
     }
 }
  
- */
+

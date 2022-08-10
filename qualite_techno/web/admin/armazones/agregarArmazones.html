@@ -21,35 +21,35 @@
                                 <input type="text" id="txtCodigoDeBarras" readonly class=" form-control w-50">
                             </div>
                             <div class="row pb-4 text-center">
-                                <label for="nombre" class="form-label w-50">Nombre:</label>
+                                <label for="txtNombre" class="form-label w-50">Nombre:</label>
                                 <input type="text" id="txtNombre" class=" form-control w-50">
                             </div>
                             <div class="row pb-4 text-center">
-                                <label for="marca" class="form-label w-50">Marca:</label>
+                                <label for="txtMarca" class="form-label w-50">Marca:</label>
                                 <input type="text" id="txtMarca" class="form-control w-50">
                             </div>
                             <div class="row pb-4 text-center">
-                                <label for="modelo" class="form-label w-50">Modelo:</label>
+                                <label for="txtModelo" class="form-label w-50">Modelo:</label>
                                 <input type="text" id="txtModelo" class="form-control w-50">
                             </div>
                             <div class="row pb-4 text-center">
-                                <label for="color" class="form-label w-50">Color:</label>
+                                <label for="txtColor" class="form-label w-50">Color:</label>
                                 <input type="text" id="txtColor" class="form-control w-50">
                             </div>
                             <div class="row pb-4 text-center">
-                                <label for="dimensiones" class="form-label w-50">Dimensiones:</label>
+                                <label for="txtDimensiones" class="form-label w-50">Dimensiones:</label>
                                 <input type="text" id="txtDimensiones" class="form-control w-50">
                             </div>
                             <div class="row pb-4 text-center">
-                                <label for="precioCompra" class="form-label w-50">Precio compra:</label>
+                                <label for="txtPrecioCompra" class="form-label w-50">Precio compra:</label>
                                 <input type="text" id="txtPrecioCompra" class="form-control w-50">
                             </div>
                             <div class="row pb-4 text-center">
-                                <label for="precioVenta" class="form-label w-50">Precio venta:</label>
+                                <label for="txtPrecioVenta" class="form-label w-50">Precio venta:</label>
                                 <input type="text" id="txtPrecioVenta" class="form-control w-50">
                             </div>
                             <div class="row pb-4 text-center">
-                                <label for="existencias" class="form-label w-50">Existencias:</label>
+                                <label for="txtExistencias" class="form-label w-50">Existencias:</label>
                                 <input type="text" id="txtExistencias" class="form-control w-50">
                             </div>
                         </div>
@@ -59,19 +59,19 @@
                                 <input class="form-control" type="file" id="fotografia">
                             </div>
                             <div class="row ps-4">
-                                <label for="descripcion" class="form-label w-50">Descripci&oacute;n</label>
+                                <label for="txtDescripcion" class="form-label w-50">Descripci&oacute;n</label>
                             </div>
                             <div class="row ps-4 pt-2">
                                 <textarea id="txtDescripcion" class="form-control" ></textarea>
                             </div>
                             <br><br><br><br>
                             <div class="row mt-lg-5 justify-content-center">
-                                <button type="button" class="btn btn-success w-25 m-1" onclick="alertaAgregar();" id="btnAgregar"><i class="fa-solid fa-plus me-1"></i>Agregar</button>
+                                <button type="button" class="btn btn-success w-25 m-1" onclick="cm.agregarArmazon();" id="btnAgregar"><i class="fa-solid fa-plus me-1"></i>Agregar</button>
                                 <button type="button" class="btn btn-dark w-25 m-1" onclick="cm.limpiarFormularioDetalle();" id="btnLimpiar" ><i class="fa-solid fa-broom me-1"></i>Limpiar</button>
                             </div>
                             <div class="row mt-lg-1 justify-content-center">
-                                <button type="button" class="btn btn-danger w-25 m-1" onclick="alertaAgregar();" disabled id="btnEliminar"><i class="fa-solid fa-trash me-1"></i>Eliminar</button>
-                                <button type="button" class="btn btn-warning w-25 m-1" onclick="alertaAgregar();" disabled id="btnActualizar"><i class="fa-solid fa-arrows-spin me-1"></i>Actualizar</button>
+                                <button type="button" class="btn btn-danger w-25 m-1" onclick="cm.eliminarArmazon();" id="btnEliminar" disabled><i class="fa-solid fa-trash me-1"></i>Eliminar</button>
+                                <button type="button" class="btn btn-warning w-25 m-1" onclick="cm.agregarArmazon();" id="btnActualizar" disabled><i class="fa-solid fa-arrows-spin me-1"></i>Actualizar</button>
                             </div>
                         </div>
                     </div>
