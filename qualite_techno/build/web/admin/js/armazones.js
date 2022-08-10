@@ -2,7 +2,7 @@ let armazones =    [
                             {
                                 idProducto      : 1,
                                 idArmazon       : 1,
-                                codigoDeBarras  : 1,
+                                codigoDeBarras  : "OQ-1",
                                 nombre          : "Armazon de madera",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -17,7 +17,7 @@ let armazones =    [
                             {
                                 idProducto      : 2,
                                 idArmazon       : 2,
-                                codigoDeBarras  : 2,
+                                codigoDeBarras  : "OQ-2",
                                 nombre          : "Armazon de pasta",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -32,7 +32,7 @@ let armazones =    [
                             {
                                 idProducto      : 3,
                                 idArmazon       : 3,
-                                codigoDeBarras  : 3,
+                                codigoDeBarras  : "OQ-3",
                                 nombre          : "Armazon de pasta",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -66,8 +66,8 @@ function fillTable()
                             '<td>' + armazones[i].precioVenta + '</td>' +
                             '<td>' + armazones[i].existencias + '</td>' +
                             '<td>' + armazones[i].estatus + '</td>' +
-                            '<td>' + armazones[i].descripcion + '</td>' +
-                            '<td><a href = "#" onclick="cm.mostrarDetalleArmazon(' + armazones[i].idProducto + ');">Ver detalle</a>' +
+                            '<td>' + armazones[i].descripcion + '</td>' +           //Cambiar a id armazon
+                            '<td><a href = "#" onclick="cm.mostrarDetalleArmazon(' + armazones[i].idArmazon + ');">Ver detalle</a>' +
                      '</tr>'
     }
     document.getElementById('tbArmazones').innerHTML = contenido;
@@ -77,7 +77,7 @@ export function setDetalleVisible(valor)
     if (valor === true)
     {
         document.getElementById('divDetalleArmazones').style.display = "";
-        document.getElementById('divListadoArmazones').style.display = "";
+        document.getElementById('divListadoArmazones').style.display = "none";
     }
     else
     {
@@ -92,7 +92,7 @@ export function mostrarDetalleArmazon(idProducto)
     //Buscamos la posicion del Armazon
     i = buscarPosiconPorId(idProducto);
     
-    if(i > 0)
+    if(i >= 0)
     {
         //Limpiamos el formulario
         limpiarFormularioDetalle();
@@ -114,6 +114,8 @@ export function mostrarDetalleArmazon(idProducto)
         //Activamos los botones de eliminar y actualizar, y desactivamos el de agregar
         document.getElementById("btnEliminar").classList.remove("disabled");
         document.getElementById("btnActualizar").classList.remove("disabled");
+        
+        setDetalleVisble(false);
     }
     else
         alert('Armazon no encontrado');
@@ -227,7 +229,7 @@ export function eliminarArmazon()
     if(document.getElementById("txtCodigoDeBarras").value !== '')
     {
         //Buscamos la posicion del accesorio
-        pos = buscarPosicionPorId(parseInt(document.getElementById("idProducto").value));
+        pos = buscarPosicionPorId(parseInt(document.getElementById("txtCodigoDeBarras").value)); //Que reciba el codigo
         
         if(pos >= 0)
         {
