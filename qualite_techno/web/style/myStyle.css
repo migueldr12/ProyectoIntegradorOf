@@ -1,7 +1,7 @@
 .imgLogo
 {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 .imgTxtLogo
 {
@@ -24,6 +24,7 @@
 {
     width: 100%;
     color:white;
+    font-size: 1vw;
 }
 
 
@@ -40,6 +41,46 @@
 .dropdown {
   position: relative;
   display: inline-block;
+}
+
+.dropdown-menu {
+    background-color: #1d7582;
+    color: white;
+}
+
+.dropdown-menu li {
+position: relative;
+}
+
+.dropdown-menu a{
+color: white;
+}
+
+.dropdown-menu  a:hover{
+background-color: #09979d;
+font-weight: bold;
+color: white;
+}
+
+.dropdown-menu .dropdown-submenu {
+display: none;
+position: absolute;
+left: 100%;
+top: -7px;
+}
+
+.dropdown-menu .dropdown-submenu-left {
+right: 100%;
+left: auto;
+}
+
+.dropdown-menu > li:hover > .dropdown-submenu {
+display: block;
+}
+
+.dropdown:hover > .dropdown-menu{
+    display: block;
+    margin-top: 0; 
 }
 
 .dropdown-content2 {
@@ -86,7 +127,7 @@
     margin-top: 0; 
  }
  
-.dropdown:hover .btn {
+.dropdown:hover .ul {
   background-color: #09979d;
   font-weight: bold;
   color: white;
