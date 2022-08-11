@@ -1,3 +1,5 @@
+/* global Swal */
+
 let armazones =    [
                             {
                                 idProducto      : 1,
@@ -94,6 +96,8 @@ export function mostrarDetalleArmazon(idProducto)
     
     if(i >= 0)
     {
+        //Abrimos el detalle de armazones
+        setDetalleVisible(true);
         //Limpiamos el formulario
         limpiarFormularioDetalle();
         
@@ -111,11 +115,8 @@ export function mostrarDetalleArmazon(idProducto)
         document.getElementById("txtExistencias").value = armazones[i].existencias;
         document.getElementById("txtDescripcion").value = armazones[i].descripcion;
         
-        //Activamos los botones de eliminar y actualizar, y desactivamos el de agregar
+        //Activamos el boton de eliminar
         document.getElementById("btnEliminar").classList.remove("disabled");
-        document.getElementById("btnActualizar").classList.remove("disabled");
-        
-        setDetalleVisble(false);
     }
     else
         alert('Armazon no encontrado');
@@ -134,6 +135,8 @@ export function limpiarFormularioDetalle()
     document.getElementById("txtPrecioVenta").value = "";
     document.getElementById("txtExistencias").value = "";
     document.getElementById("txtDescripcion").value = "";
+    
+    document.getElementById("btnEliminar").classList.add("disabled");
 }
 export function buscarPosiconPorId(id)
 {
@@ -169,8 +172,8 @@ export function agregarArmazon()
                         precioVenta : parseFloat(document.getElementById("txtPrecioVenta").value),
                         existencias : parseFloat(document.getElementById("txtExistencias").value),
                         estatus : "Activo",
-                        descripcion : document.getElementById("txtDescripcion").value,   
-                    }
+                        descripcion : document.getElementById("txtDescripcion").value   
+                    };
     if(document.getElementById("txtCodigoDeBarras").value.trim() === '')
     {
      
@@ -190,7 +193,7 @@ export function agregarArmazon()
         document.getElementById("txtIdArmazon").value = armazon.idArmazon;
         
         //Mostramos un mensaje al usuario
-        alert('Datos del accesorio agregados correctamente');
+        Swal.fire('Datos del armazon agregados correctamente', '', "success");
         
         //Actualizamos la tabla
         fillTable();
@@ -203,7 +206,7 @@ export function agregarArmazon()
         armazon.codigoDeBarras = parseInt(document.getElementById("txtCodigoDeBarras").value);
         
         //Buscamos la posicion del objeto
-        pos = buscarPosicionPorId(armazon.idArmazon);
+        pos = buscarPosiconPorId(armazon.idArmazon);
         
         if(pos >= 0)
         {
@@ -211,14 +214,14 @@ export function agregarArmazon()
             armazones[pos] = armazon;
             
             //Mostramos un mensaje al usuario
-            swal("Producto actualizado", "Se actualizo correctamente el producto", "success");;
+            Swal.fire('Producto actualizado', 'Se actualizo correctamente el producto', "success");;
             
             //Actualizamos la tabla
             fillTable();
         }
         else
         {
-            swal("Error: armazon no encontrado", "warning")
+            Swal.fire('Error: armazon no encontrado', '', "warning");
         }
     }
         
@@ -229,7 +232,7 @@ export function eliminarArmazon()
     if(document.getElementById("txtCodigoDeBarras").value !== '')
     {
         //Buscamos la posicion del accesorio
-        pos = buscarPosicionPorId(parseInt(document.getElementById("txtCodigoDeBarras").value)); //Que reciba el codigo
+        pos = buscarPosiconPorId(parseInt(document.getElementById("txtIdArmazon").value)); //Que reciba el codigo
         
         if(pos >= 0)
         {
@@ -237,7 +240,7 @@ export function eliminarArmazon()
             armazones.splice(pos, 1);
             
             //Mostramos un mensaje de notificacion al usuario
-            alert('Registro eliminado correctamente');
+            Swal.fire('Registro eliminado correctamente', '', "success");
             
             //Actualizamos la tabla
             fillTable();
