@@ -4,7 +4,7 @@ let armazones =    [
                             {
                                 idProducto      : 1,
                                 idArmazon       : 1,
-                                codigoDeBarras  : "OQ-1",
+                                codigoDeBarras  : 1,
                                 nombre          : "Armazon de madera",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -19,7 +19,7 @@ let armazones =    [
                             {
                                 idProducto      : 2,
                                 idArmazon       : 2,
-                                codigoDeBarras  : "OQ-2",
+                                codigoDeBarras  : 2,
                                 nombre          : "Armazon de pasta",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -34,7 +34,7 @@ let armazones =    [
                             {
                                 idProducto      : 3,
                                 idArmazon       : 3,
-                                codigoDeBarras  : "OQ-3",
+                                codigoDeBarras  : 3,
                                 nombre          : "Armazon de pasta",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -98,13 +98,11 @@ export function mostrarDetalleArmazon(idProducto)
     {
         //Abrimos el detalle de armazones
         setDetalleVisible(true);
-        //Limpiamos el formulario
-        limpiarFormularioDetalle();
         
         //Llenamos el formulario con datos del armazon
         document.getElementById("txtIdProducto").value = armazones[i].idProducto;
         document.getElementById("txtIdArmazon").value = armazones[i].idArmazon;
-        document.getElementById("txtCodigoDeBarras").value = armazones[i].codigoDeBarras;
+        document.getElementById("txtCodigoDeBarras").value = 'OQ-' + armazones[i].codigoDeBarras;
         document.getElementById("txtNombre").value = armazones[i].nombre;
         document.getElementById("txtMarca").value = armazones[i].marca;
         document.getElementById("txtModelo").value = armazones[i].modelo;
@@ -135,8 +133,6 @@ export function limpiarFormularioDetalle()
     document.getElementById("txtPrecioVenta").value = "";
     document.getElementById("txtExistencias").value = "";
     document.getElementById("txtDescripcion").value = "";
-    
-    document.getElementById("btnEliminar").classList.add("disabled");
 }
 export function buscarPosiconPorId(id)
 {
@@ -155,6 +151,8 @@ export function buscarPosiconPorId(id)
 }
 export function agregarArmazon()
 {
+    //Limpiamos formulario
+    limpiarFormularioDetalle();
     //Declaramos una variable temporal para saber la posicion del armazon
     let pos = -1;
     
@@ -176,12 +174,12 @@ export function agregarArmazon()
                     };
     if(document.getElementById("txtCodigoDeBarras").value.trim() === '')
     {
-     
+        
         //Generamos un ID para el armazon a partir de los milisegundos 
         //de la fecha actual
         armazon.idProducto = Date.now();
         armazon.idArmazon = Date.now() + 1 ;
-        armazon.codigoDeBarras = '' + Date.now() + 2;
+        armazon.codigoDeBarras = 'OQ-' + Date.now() + 2;
         
         //Insertamos el accesorio al final del arreglo
         armazones[armazones.length] = armazon;
@@ -232,7 +230,7 @@ export function eliminarArmazon()
     if(document.getElementById("txtCodigoDeBarras").value !== '')
     {
         //Buscamos la posicion del accesorio
-        pos = buscarPosiconPorId(parseInt(document.getElementById("txtIdArmazon").value)); //Que reciba el codigo
+        pos = buscarPosiconPorId(parseInt(document.getElementById("txtCodigoDeBarras").value)); //Que reciba el codigo
         
         if(pos >= 0)
         {
@@ -251,6 +249,11 @@ export function eliminarArmazon()
             setDetalleVisible(false);
         }
     }
+}
+export function limpiar_y_mostrar_detalle()
+{
+    limpiarFormularioDetalle();
+    setDetalleVisible(false);
 }
  
 
