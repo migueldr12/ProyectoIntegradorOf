@@ -1,9 +1,9 @@
 /* global Swal */
 
-let accesorios =    [
+let armazones =    [
                             {
                                 idProducto      : 1,
-                                idAccesorio       : 1,
+                                idArmazon       : 1,
                                 codigoDeBarras  : "OQ-1",
                                 nombre          : "Armazon de madera",
                                 marca           : "Gucci",
@@ -18,7 +18,7 @@ let accesorios =    [
                             },
                             {
                                 idProducto      : 2,
-                                idAccesorio       : 2,
+                                idArmazon       : 2,
                                 codigoDeBarras  : "OQ-2",
                                 nombre          : "Armazon de pasta",
                                 marca           : "Gucci",
@@ -33,7 +33,7 @@ let accesorios =    [
                             },
                             {
                                 idProducto      : 3,
-                                idAccesorio       : 3,
+                                idArmazon       : 3,
                                 codigoDeBarras  : "OQ-3",
                                 nombre          : "Armazon de pasta",
                                 marca           : "Gucci",
@@ -56,20 +56,20 @@ function fillTable()
 {
     let contenido = '';
     // recorremos el arreglo
-    for(let i = 0; i < accesorios.length; i++)
+    for(let i = 0; i < armazones.length; i++)
     {
         contenido += '<tr>' +
-                            '<td>' + accesorios[i].nombre + '</td>' +
-                            '<td>' + accesorios[i].marca + '</td>' +
-                            '<td>' + accesorios[i].modelo + '</td>' +
-                            '<td>' + accesorios[i].color + '</td>' +
-                            '<td>' + accesorios[i].dimensiones + '</td>' +
-                            '<td>' + accesorios[i].precioCompra + '</td>' +
-                            '<td>' + accesorios[i].precioVenta + '</td>' +
-                            '<td>' + accesorios[i].existencias + '</td>' +
-                            '<td>' + accesorios[i].estatus + '</td>' +
-                            '<td>' + accesorios[i].descripcion + '</td>' +           //Cambiar a id armazon
-                            '<td><a href = "#" onclick="cm.mostrarDetalleArmazon(' + accesorios[i].idArmazon + ');">Ver detalle</a>' +
+                            '<td>' + armazones[i].nombre + '</td>' +
+                            '<td>' + armazones[i].marca + '</td>' +
+                            '<td>' + armazones[i].modelo + '</td>' +
+                            '<td>' + armazones[i].color + '</td>' +
+                            '<td>' + armazones[i].dimensiones + '</td>' +
+                            '<td>' + armazones[i].precioCompra + '</td>' +
+                            '<td>' + armazones[i].precioVenta + '</td>' +
+                            '<td>' + armazones[i].existencias + '</td>' +
+                            '<td>' + armazones[i].estatus + '</td>' +
+                            '<td>' + armazones[i].descripcion + '</td>' +           //Cambiar a id armazon
+                            '<td><a href = "#" onclick="cm.mostrarDetalleArmazon(' + armazones[i].idArmazon + ');">Ver detalle</a>' +
                      '</tr>'
     }
     document.getElementById('tbArmazones').innerHTML = contenido;
@@ -153,11 +153,6 @@ export function buscarPosiconPorId(id)
         //Si llegamos hasta aqui significa que no encontramos el id buscamos el 
     return -1;
 }
-
-export function limpiarYMostrar(){
-    
-}
-
 export function agregarArmazon()
 {
     //Declaramos una variable temporal para saber la posicion del armazon
