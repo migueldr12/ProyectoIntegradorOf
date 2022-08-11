@@ -12,9 +12,14 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/PC/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/js/sweetAlert.js</file>
             <file>file:/C:/Users/PC/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/armazones/agregarArmazones.html</file>
             <file>file:/C:/Users/PC/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/js/armazones.js</file>
+=======
+            <file>file:/C:/Users/GTO/Desktop/ProyectoIntegradorOf/qualite_techno/web/style/myStyle.css</file>
+            <file>file:/C:/Users/GTO/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/index.html</file>
+>>>>>>> 13b0ad3b5378b86036aa2f95d9fa6d0049ea6553
         </group>
     </open-files>
 </project-private>
