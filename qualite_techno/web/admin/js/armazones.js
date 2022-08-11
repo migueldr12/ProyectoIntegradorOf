@@ -113,7 +113,10 @@ export function mostrarDetalleArmazon(idProducto)
         document.getElementById("txtPrecioCompra").value = armazones[i].precioCompra;
         document.getElementById("txtPrecioVenta").value = armazones[i].precioVenta;
         document.getElementById("txtExistencias").value = armazones[i].existencias;
-        document.getElementById("txtDescripcion").value = armazones[i].descripcion;   
+        document.getElementById("txtDescripcion").value = armazones[i].descripcion;
+        
+        //Activamos el boton de eliminar
+        document.getElementById("btnEliminar").classList.remove("disabled");
     }
     else
         alert('Armazon no encontrado');
@@ -132,6 +135,8 @@ export function limpiarFormularioDetalle()
     document.getElementById("txtPrecioVenta").value = "";
     document.getElementById("txtExistencias").value = "";
     document.getElementById("txtDescripcion").value = "";
+    
+    document.getElementById("btnEliminar").classList.add("disabled");
 }
 export function buscarPosiconPorId(id)
 {
@@ -188,7 +193,7 @@ export function agregarArmazon()
         document.getElementById("txtIdArmazon").value = armazon.idArmazon;
         
         //Mostramos un mensaje al usuario
-        Swal.fire('Datos del accesorio agregados correctamente', '', "success");
+        Swal.fire('Datos del armazon agregados correctamente', '', "success");
         
         //Actualizamos la tabla
         fillTable();
@@ -227,7 +232,7 @@ export function eliminarArmazon()
     if(document.getElementById("txtCodigoDeBarras").value !== '')
     {
         //Buscamos la posicion del accesorio
-        pos = buscarPosicionPorId(parseInt(document.getElementById("txtCodigoDeBarras").value)); //Que reciba el codigo
+        pos = buscarPosiconPorId(parseInt(document.getElementById("txtIdArmazon").value)); //Que reciba el codigo
         
         if(pos >= 0)
         {
@@ -235,7 +240,7 @@ export function eliminarArmazon()
             armazones.splice(pos, 1);
             
             //Mostramos un mensaje de notificacion al usuario
-            alert('Registro eliminado correctamente');
+            Swal.fire('Registro eliminado correctamente', '', "success");
             
             //Actualizamos la tabla
             fillTable();
