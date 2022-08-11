@@ -1,3 +1,5 @@
+/* global Swal */
+
 let armazones =    [
                             {
                                 idProducto      : 1,
@@ -94,6 +96,8 @@ export function mostrarDetalleArmazon(idProducto)
     
     if(i >= 0)
     {
+        //Abrimos el detalle de armazones
+        setDetalleVisible(true);
         //Limpiamos el formulario
         limpiarFormularioDetalle();
         
@@ -109,13 +113,7 @@ export function mostrarDetalleArmazon(idProducto)
         document.getElementById("txtPrecioCompra").value = armazones[i].precioCompra;
         document.getElementById("txtPrecioVenta").value = armazones[i].precioVenta;
         document.getElementById("txtExistencias").value = armazones[i].existencias;
-        document.getElementById("txtDescripcion").value = armazones[i].descripcion;
-        
-        //Activamos los botones de eliminar y actualizar, y desactivamos el de agregar
-        document.getElementById("btnEliminar").classList.remove("disabled");
-        document.getElementById("btnActualizar").classList.remove("disabled");
-        
-        setDetalleVisble(false);
+        document.getElementById("txtDescripcion").value = armazones[i].descripcion;   
     }
     else
         alert('Armazon no encontrado');
@@ -169,8 +167,8 @@ export function agregarArmazon()
                         precioVenta : parseFloat(document.getElementById("txtPrecioVenta").value),
                         existencias : parseFloat(document.getElementById("txtExistencias").value),
                         estatus : "Activo",
-                        descripcion : document.getElementById("txtDescripcion").value,   
-                    }
+                        descripcion : document.getElementById("txtDescripcion").value   
+                    };
     if(document.getElementById("txtCodigoDeBarras").value.trim() === '')
     {
      
@@ -190,7 +188,7 @@ export function agregarArmazon()
         document.getElementById("txtIdArmazon").value = armazon.idArmazon;
         
         //Mostramos un mensaje al usuario
-        alert('Datos del accesorio agregados correctamente');
+        Swal.fire('Datos del accesorio agregados correctamente', '', "success");
         
         //Actualizamos la tabla
         fillTable();
@@ -203,7 +201,7 @@ export function agregarArmazon()
         armazon.codigoDeBarras = parseInt(document.getElementById("txtCodigoDeBarras").value);
         
         //Buscamos la posicion del objeto
-        pos = buscarPosicionPorId(armazon.idArmazon);
+        pos = buscarPosiconPorId(armazon.idArmazon);
         
         if(pos >= 0)
         {
@@ -211,14 +209,14 @@ export function agregarArmazon()
             armazones[pos] = armazon;
             
             //Mostramos un mensaje al usuario
-            swal("Producto actualizado", "Se actualizo correctamente el producto", "success");;
+            Swal.fire('Producto actualizado', 'Se actualizo correctamente el producto', "success");;
             
             //Actualizamos la tabla
             fillTable();
         }
         else
         {
-            swal("Error: armazon no encontrado", "warning")
+            Swal.fire('Error: armazon no encontrado', '', "warning");
         }
     }
         
