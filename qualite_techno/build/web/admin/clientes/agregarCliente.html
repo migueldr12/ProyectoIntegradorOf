@@ -1,79 +1,137 @@
-<div class="row m-4">
-    <div class="col-12">
+<div class="row m-2">
+    <div class="col-12" id="divDetalleClientes">
         <div class="card">
             <div class="card-header head-main">
-                <h2>Agregar cliente</h2>
+                <h2 class="head-main">Clientes<a onclick="cm.setDetalleVisible(false);"><svg class="cierre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/></svg></a></h2> 
             </div>
             <div class="card-body">
-                <form class="m-4">
+                <form class="m-2">
                     <div class="row">
-                        <div class="col-6">
-                            <div class="row pb-4 text-center">
-                                <label for="nombre" class="w-50">Nombre:</label>
-                                <input type="text" id="nombre" class="w-50">
+                        <div class="col-4">
+                            <div class=" form-floating">
+                                <input type="text" id="txtIdPersona" class="form-control"readonly placeholder="">
+                                <label for="txtIdPersono">Id Persona:</label>                                
                             </div>
-                            <div class="row pb-4 text-center">
-                                <label for="apellidoPaterno" class="w-50">Apellido Paterno:</label>
-                                <input type="text" id="apellidoPaterno" class="w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="apellidoMaterno" class="w-50">Apellido Materno:</label>
-                                <input type="text" id="apellidoMaterno" class="w-50">
-                            </div>
-                            
-                            <div class="row pb-4 text-center">
-                            <label for="genero" class="w-50">G&eacute;nero:</label>
-                            <select name="Genero" id="Genero" class="w-50">
-                             <option value="m">Masculino</option>
-                             <option value="f">Femenino</option>
-                             <option value="u">Otro</option>
-                            </select>
-                            </div>
-                            
-                            
-                            <div class="row pb-4 text-center">
-                                <label for="rfc" class="w-50">RFC:</label>
-                                <input type="text" id="rfc" class="w-50">
-                            </div>
-                            
-                            <div class="row pb-4 text-center">
-                                <label for="correo" class="w-50">Correo:</label>
-                                <input type="text" id="correo" class="w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="telefonoM" class="w-50">Tel&eacute;fono m&oacute;vil:</label>
-                                <input type="text" id="telefonoMovil" class="w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="telefonoCasa" class="w-50">Tel&eacute;fono de casa:</label>
-                                <input type="text" id="telefonoCasa" class="w-50">
-                            </div>
-                            
-                            <div class="row pb-4 text-center">
-                            <label for="estatus" class="w-50">Eastatus:</label>
-                            <select name="Estatus" id="Estatus" class="w-50">
-                             <option value="a">Activo</option>
-                             <option value="i">Inactivo</option>
-                            </select>
-                            </div>
-                            
                         </div>
-                        <div class="col-6">
-                            <div class="row ps-4">
-                                <label for="descripcion">Clave &Uacute;nica: </label>
-                                 <input type="text" id="clave" class="w-50">
-                                  <button type="button" style="background-color: #d9d9d9" class="btn btn-primary text-black w-25" >G&eacute;nerar clave</button>
+                        <div class="col-4">
+                            <div class=" form-floating">
+                                <input type="text" id="txtIdCliente" class="form-control"readonly placeholder="">
+                                <label for="txtIdCliente">Id del cliente:</label>                                
                             </div>
-                            
-                            <br><br><br><br>
-                            <div class="row mt-lg-5 justify-content-right">
-                                <button type="button" style="background-color: #d9d9d9" class="btn btn-primary text-black w-25" onclick="alertaAgregarC();">Agregar</button>
+                        </div>
+                        <div class="col-4">
+                            <div class=" form-floating">
+                                <input type="text" id="txtCodigoDeCliente" class="form-control" readonly placeholder="">
+                                <label for="txtCodigoDeCliente">C&oacute;digo del cliente:</label>                                
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                    
+                 
+                    
+                    <div class="row mt-2">
+                        <div class="col-3">
+                            <div class="pb-2 form-floating ">
+                                <input type="text" id="txtNombre" class=" form-control " placeholder=""/>
+                                <label for="txtNombre">Nombre:</label>
+                            </div>
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtRfc" class="form-control " placeholder="">
+                                <label for="txtRfc">RFC:</label>                                
                             </div>
                         </div>
                         
+                        <div class="col-3">
+                            
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtApellidoPaterno" class="form-control" placeholder="">
+                                <label for="txtApellidoPaterno">Apellido Paterno:</label>                                
+                            </div>
+                            
+                                                    <div class="pb-2 form-floating">
+                                <input type="text" id="txtTelefonoDeCasa" class="form-control " placeholder="">
+                                <label for="txtTelefonoDeCasa">Tel&eacute;fono de casa:</label>                                
+                            </div>
+                            
+                        </div>
+                        
+                        
+                         <div class="col-3">
+                            
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtApellidoMaterno" class="form-control" placeholder="">
+                                <label for="txtApellidoMaterno">Apellido Materno:</label>                                
+                            </div>
+                           <div class="pb-2 form-floating">                                
+                                <input id="txtTelefonoMovil" class="form-control" placeholder=""></input>
+                                <label for="txtTelefonoMovil">Tel&eacute;fono m&oacute;vil:</label>
+                            </div> 
+                           
+                            
+                        </div>
+                        
+                        
+                        
+                        <div class="col-3">
+                            
+                             <div class="pb-2 form-floating">
+                                
+                              
+                                    <select class="pb-2 form-control" id="txtGenero"  placeholder="">
+                                         <option value ="m">Masculino</option>
+                                         <option value ="f">Femenino</option>   //&oacute;
+                                         <option value ="o">Otro</option>
+                                    </select>
+                                    <label for="txtGenero" class="form-label">G&eacute;nero</label>
+                            </div>
+                            
+                            
+                             <div class="pb-2 form-floating">                                
+                                <input id="txtCorreo" class="form-control" placeholder=""></input>
+                                <label for="txtCorreo">Correo:</label>
+                            </div>
+                            
+                        </div>
                         
                     </div>
+                   
+                   
+                    <div class="row m-3 justify-content-center">
+                        <button type="button" class="btn btn-primary w-auto  m-1" onclick="cm.agregarCliente();" id="btnAgregar"><i class="fa-solid fa-floppy-disk me-1"></i></i>Guardar</button>
+                        <button type="button" class="btn btn-success w-auto m-1" onclick="cm.limpiarFormularioDetalle();" id="btnLimpiar" ><i class="fa-solid fa-arrows-spin me-1"></i>Nuevo</button>
+                        <button type="button" class="btn btn-danger w-auto m-1" onclick="cm.eliminarCliente();" id="btnEliminar"><i class="fa-solid fa-trash me-1"></i>Eliminar</button>
+                    </div>
                 </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 mt-3" id="divListadoClientes">
+        <div class="card">
+            <div class="card-header head-main">
+                <h2 class="head-main">Listado de clientes</h2>
+            </div>
+            <div class="card-body">
+                <div class="row table-responsive m-2">
+                    <table class="table table-bordered table-hover text-center">
+                        <thead class="tabla">
+                            <tr>
+                                <th class="w-auto" scope="col">Nombre</th>
+                                <th class="w-auto" scope="col">Correo</th>
+                                <th class="w-auto" scope="col">Tel&eacute;fono de casa</th>
+                                <th class="w-auto" scope="col">Tel&eacute;fono m&oacute;vil</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbClientes">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row justify-content-center">
+                    <button type="button" class="btn btn-success w-auto" onclick="cm.limpiar_y_mostrar_detalle();"><i class="fa-solid fa-plus me-2"></i>Agregar nuevo</button>                    
+                </div>
             </div>
         </div>
     </div>
