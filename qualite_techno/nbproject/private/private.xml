@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-<<<<<<< HEAD
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/PC/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/js/sweetAlert.js</file>
             <file>file:/C:/Users/PC/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/armazones/agregarArmazones.html</file>
             <file>file:/C:/Users/PC/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/js/armazones.js</file>
-=======
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
-        <file>
-            <url>web/admin/js/armazones.js</url>
-            <bookmark id="1">
-                <name/>
-                <line>43</line>
-                <key/>
-            </bookmark>
-        </file>
-    </editor-bookmarks>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/GTO/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/js/armazones.js</file>
-            <file>file:/C:/Users/GTO/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/js/main.js</file>
-            <file>file:/C:/Users/GTO/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/armazones/agregarArmazones.html</file>
-            <file>file:/C:/Users/GTO/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/armazones/buscarArmazones.html</file>
-            <file>file:/C:/Users/GTO/Desktop/ProyectoIntegradorOf/qualite_techno/web/admin/index.html</file>
->>>>>>> c6faf7ed31519ba3be3487fd1d8f3697f06cdabc
         </group>
     </open-files>
 </project-private>

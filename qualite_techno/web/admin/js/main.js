@@ -1,15 +1,21 @@
 //SOLUCIONES
 
-function cargarModuloSolucion()
+function cargarModuloSoluciones()
 {
-    fetch('soluciones/solucionesPrincipal.html')
-        .then(respuesta => {
+    fetch('soluciones/agregarSolucion.html')
+    .then(respuesta => {
             return respuesta.text();
         })
-        .then(datos => {
-            // insertamos el codigo HTML dentro del contenedor principal
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./soluciones.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializar();
+                        });
+                    });
 }
 
 function cargarModuloSolucionAgregar()
@@ -622,25 +628,13 @@ function cargarModuloArmazonesAgregar()
     .then(datos => {
                         // insertamos el codigo HTML dentro del contenedor principal
                         document.getElementById('contenedor_principal').innerHTML = datos;
-            
+                        // Se agrego este import para cada modulo
                         import('./armazones.js')
                         .then(obj => {
                             cm = obj;
                             cm.inicializarAgregar();
                         });
                     });
-}
-
-function cargarModuloArmazonesModificar()
-{
-    fetch('armazones/modificarArmazones.html')
-        .then(respuesta => {
-            return respuesta.text();
-        })
-        .then(datos => {
-            // insertamos el codigo HTML dentro del contenedor principal
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
 }
 function cargarModuloArmazonesReporte()
 {

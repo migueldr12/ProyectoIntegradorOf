@@ -33,24 +33,25 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="cargarModuloVentas();" id="dropdownMenuVentas" data-bs-toggle="dropdown"  aria-expanded="false">
+                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuVentas" data-bs-toggle="dropdown"  aria-expanded="false">
                         <i class="fa-solid fa-receipt me-1"></i>Ventas
-                    </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuVentas">
-                        <a class="dropdown-item" href="#" onclick="cargarModuloVentasAgregar();">Agregar</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloVentasBuscar();">Buscar</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloVentasReporte();">Reporte</a>
+                    </button> 
+                   <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuVentas">
+                        <a class="dropdown-item" href="#" onclick="alertaEnProceso();">Agregar</a>
+                        <a class="dropdown-item" href="#" onclick="alertaEnProceso();">Buscar</a>
+                        <a class="dropdown-item" href="#" onclick="alertaEnProceso();">Reporte</a>
                     </div>
+                    -->
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="cargarModuloMaterial();" id="dropdownMenuMateriales" data-bs-toggle="dropdown"  aria-expanded="false" >
+                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuMateriales" data-bs-toggle="dropdown"  aria-expanded="false" >
                         <i class="fa-solid fa-shapes me-1"></i>Materiales
                     </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuMateriales">
+                   <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuMateriales">
                         <a class="dropdown-item" href="#" onclick="cargarModuloAgregarMaterial();">Agregar</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloBuscarMaterial();">Buscar</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloCatalogoMateriales()">Cat&aacute;logo</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="dropdown">
                     <button type="button" class="btn dropdown-toggle boton-barra"  id="dropdownMenuProducto" data-bs-toggle="dropdown"  aria-expanded="false" >
@@ -61,7 +62,7 @@
                             <a class="dropdown-item" href="#" onclick="cargarModuloArmazones();"><i class="fa-solid fa-glasses me-1"></i>Armazones</a>
                             <ul class="dropdown-menu dropdown-submenu">
                                 <li>
-                                    <a class="dropdown-item" href="#">Agregar</a>
+                                    <a class="dropdown-item" href="#" onclick="cargarModuloArmazonesAgregar();">Agregar</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#" onclick="cargarModuloArmazonesReporte();">Cat&aacute;logo</a>
@@ -91,7 +92,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#"><i class="fa-solid fa-eye-dropper me-1"></i>Soluciones</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloSoluciones();"><i class="fa-solid fa-eye-dropper me-1"></i>Soluciones</a>
                             <ul class="dropdown-menu dropdown-submenu">
                                 <li>
                                     <a class="dropdown-item" href="#">Agregar</a>
@@ -114,64 +115,64 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" id="dropdownMenuGraduacion" data-bs-toggle="dropdown"  aria-expanded="false" >
+                    <button type="button" class="btn dropdown-toggle boton-barra" id="dropdownMenuGraduacion" data-bs-toggle="dropdown"  aria-expanded="false" onclick="alertaEnProceso();" >
                         <i class="fa-solid fa-arrows-to-eye me-1"></i>Graduaci&oacute;n
                     </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuGraduacion">
+                   <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuGraduacion">
                         <a class="dropdown-item" href="#">Agregar</a>
                         <a class="dropdown-item" href="#">Buscar</a>
                         <a class="dropdown-item" href="#">Cat&aacute;logo</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="cargarModuloPresupuesto();"  id="dropdownMenuPresupuesto" data-bs-toggle="dropdown"  aria-expanded="false" >
+                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();"  id="dropdownMenuPresupuesto" data-bs-toggle="dropdown"  aria-expanded="false">
                         <i class="fa-solid fa-list-check me-1"></i>Presupuestos
                     </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuPresupuesto">
+                    <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuPresupuesto">
                         <a class="dropdown-item" href="#" onclick="cargarModuloPresupuestoLentesArmazon();" >Lentes de armazon</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloPresupuestoLentesContacto();">Lentes de contacto</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="cargarModuloTratamientos();" id="dropdownMenuTratamientos" data-bs-toggle="dropdown"  aria-expanded="false" >
+                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuTratamientos" data-bs-toggle="dropdown"  aria-expanded="false" >
                         <i class="fa-brands fa-buffer me-1"></i>Tratamientos
                     </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuTratamientos">
+                   <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuTratamientos">
                         <a class="dropdown-item" href="#" onclick="cargarModuloTratamientoAgregar();">Agregar</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloTratamientoBuscar();">Buscar</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloTratamientoReporte();">Reporte</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="cargarModuloExamen();" id="dropdownMenuExamen" data-bs-toggle="dropdown"  aria-expanded="false" >
+                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuExamen" data-bs-toggle="dropdown"  aria-expanded="false" >
                         <i class="fa-solid fa-eye me-1"></i>Examen de la vista
                     </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuExamen">
+                   <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuExamen">
                         <a class="dropdown-item" href="#" onclick="cargarModuloExamenAgregar();">Agregar</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloExamenBuscar();">Buscar</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloExamenReporte();">Reporte</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" id="dropdownMenuCompra" data-bs-toggle="dropdown"  aria-expanded="false" >
+                    <button type="button" class="btn dropdown-toggle boton-barra" id="dropdownMenuCompra" data-bs-toggle="dropdown"  aria-expanded="false" onclick="alertaEnProceso();" >
                         <i class="fa-solid fa-basket-shopping me-1"></i>Compras
                     </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuCompra">
+                    <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuCompra">
                         <a class="dropdown-item" href="#">Agregar</a>
                         <a class="dropdown-item" href="#">Buscar</a>
                         <a class="dropdown-item" href="#">Cat&aacute;logo</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="cargarModuloPagos();" id="dropdownMenuPago" data-bs-toggle="dropdown"  aria-expanded="false" >
+                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuPago" data-bs-toggle="dropdown"  aria-expanded="false" >
                         <i class="fa-solid fa-money-bills me-1"></i>Pagos
                     </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuPago">
+                    <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuPago">
                         <a class="dropdown-item" href="#" onclick="cargarModuloPagosAgregar();">Agregar</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloPagosModificar();">Modificar</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloPagosEliminar();">Eliminar</a>
                         <a class="dropdown-item" href="#" onclick="cargarModuloPagosReporte();">Reporte</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div>
                     <p>&nbsp;</p>

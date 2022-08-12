@@ -1,57 +1,98 @@
-<div class="row m-4">
-    <div class="col-12">
+<div class="row m-2">
+    <div class="col-12" id="divDetalleSoluciones">
         <div class="card">
             <div class="card-header head-main">
-                <h2>Agregar soluci&oacute;n</h2>
+                <h2 class="head-main">Solucion<a onclick="cm.setDetalleVisible(false);"><svg class="cierre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/></svg></a></h2> 
             </div>
             <div class="card-body">
-                <form class="m-4">
+                <form class="m-2">
                     <div class="row">
                         <div class="col-6">
-                            <div class="row pb-4 text-center">
-                                <label for="nombre" class="w-50">Nombre:</label>
-                                <input type="text" id="datoNombre" class="w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="marca" class="w-50">Marca:</label>
-                                <input type="text" id="marca" class="w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="estatus" class="w-50">Estatus:</label>
-                                <select id="estatus" class="w-50">
-                                    <option value="activo">Activo</option>
-                                    <option value="inactivo">Inactivo</option>
-                                </select>
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="precioCompra" class="w-50">Precio de compra:</label>
-                                <input type="text" id="precioCompra" class="w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="precioVenta" class="w-50">Precio de Venta:</label>
-                                <input type="text" id="precioVenta" class="w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="existencias" class="w-50">Existencias:</label>
-                                <input type="text" id="existencias" class="w-50">
+                            <div class=" form-floating">
+                                <input type="text" id="txtIdProducto" class="form-control"readonly placeholder="">
+                                <label for="txtIdProducto">Id del producto:</label>                                
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="row ps-4">
-                                <label for="descripcion">Descripci&oacute;n:</label>
-                            </div>
-                            <div class="row ps-4 pt-2">
-                                <textarea id="descripcion" ></textarea>
-                            </div>
-                            <br><br><br><br>
-                            <div class="row mt-lg-5 justify-content-center">
-                                <button type="button" style="background-color: #d9d9d9" class="btn btn-primary text-black w-25" onclick="leerDato();">Agregar</button>
-                                <button type="button" style="background-color: #d9d9d9" class="btn btn-primary text-black w-25" onclick="insertarDato();">insertar</button>
-                                <button type="button" style="background-color: #d9d9d9" class="btn btn-primary text-black w-25" onclick="alertaDato();">alerta</button>
+                            <div class=" form-floating">
+                                <input type="text" id="txtIdSolucion" class="form-control"readonly placeholder="">
+                                <label for="txtIdSolucion">Id de la solucion:</label>                                
                             </div>
                         </div>
                     </div>
+                    <div class="row mt-2">
+                        <div class="col-6">
+                            <div class="pb-2 form-floating ">
+                                <input type="text" id="txtNombre" class=" form-control " placeholder=""/>
+                                <label for="txtNombre">Nombre:</label>
+                            </div>
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtMarca" class="form-control" placeholder="">
+                                <label for="txtMarca">Marca:</label>                                
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="pb-2 form-floating">                                
+                                <textarea id="txtDescripcion" class="form-control" placeholder=""></textarea>
+                                <label for="txtDescripcion">Descripci&oacute;n:</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtPrecioCompra" class="form-control" placeholder="">
+                                <label for="txtPrecioCompra">Precio compra:</label>                                
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtPrecioVenta" class="form-control" placeholder="">
+                                <label for="txtPrecioVenta">Precio venta:</label>                                
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtExistencias" class="form-control" placeholder="">
+                                <label for="txtExistencias">Existencias:</label>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5 justify-content-center">
+                        <button type="button" class="btn btn-primary w-auto  m-1" onclick="cm.agregarSolucion();" id="btnAgregar"><i class="fa-solid fa-floppy-disk me-1"></i></i>Guardar</button>
+                        <button type="button" class="btn btn-success w-auto m-1" onclick="cm.limpiarFormularioDetalle();" id="btnLimpiar" ><i class="fa-solid fa-arrows-spin me-1"></i>Nuevo</button>
+                        <button type="button" class="btn btn-danger w-auto m-1" onclick="cm.eliminarSolucion();" id="btnEliminar"><i class="fa-solid fa-trash me-1"></i>Eliminar</button>
+                    </div>
                 </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 mt-3" id="divListadoSoluciones">
+        <div class="card">
+            <div class="card-header head-main">
+                <h2 class="head-main">Listado de soluciones</h2>
+            </div>
+            <div class="card-body">
+                <div class="row table-responsive m-2">
+                    <table class="table table-bordered table-hover text-center">
+                        <thead class="tabla">
+                            <tr>
+                                <th class="w-auto" scope="col">Nombre</th>
+                                <th class="w-auto" scope="col">Marca</th>
+                                <th class="w-auto" scope="col">Precio Compra</th>
+                                <th class="w-auto" scope="col">Precio Venta</th>
+                                <th class="w-auto" scope="col">Existencias</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbSoluciones">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row justify-content-center">
+                    <button type="button" class="btn btn-success w-auto" onclick="cm.limpiar_y_mostrar_detalle();"><i class="fa-solid fa-plus me-2"></i>Agregar nuevo</button>                    
+                </div>
             </div>
         </div>
     </div>
