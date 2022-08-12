@@ -1,27 +1,39 @@
 //SOLUCIONES
 
-function cargarModuloSolucion()
-{
-    fetch('soluciones/solucionesPrincipal.html')
-        .then(respuesta => {
-            return respuesta.text();
-        })
-        .then(datos => {
-            // insertamos el codigo HTML dentro del contenedor principal
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
-}
-
-function cargarModuloSolucionAgregar()
+function cargarModuloSoluciones()
 {
     fetch('soluciones/agregarSolucion.html')
-        .then(respuesta => {
+    .then(respuesta => {
             return respuesta.text();
         })
-        .then(datos => {
-            // insertamos el codigo HTML dentro del contenedor principal
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./soluciones.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializar();
+                        });
+                    });
+}
+
+function cargarModuloSolucionesAgregar()
+{
+    fetch('soluciones/agregarSolucion.html')
+    .then(respuesta => {
+            return respuesta.text();
+        })
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./soluciones.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializarAgregar();
+                        });
+                    });
 }
 
 function cargarModuloSolucionBuscar()
@@ -629,25 +641,13 @@ function cargarModuloArmazonesAgregar()
     .then(datos => {
                         // insertamos el codigo HTML dentro del contenedor principal
                         document.getElementById('contenedor_principal').innerHTML = datos;
-            
+                        // Se agrego este import para cada modulo
                         import('./armazones.js')
                         .then(obj => {
                             cm = obj;
                             cm.inicializarAgregar();
                         });
                     });
-}
-
-function cargarModuloArmazonesModificar()
-{
-    fetch('armazones/modificarArmazones.html')
-        .then(respuesta => {
-            return respuesta.text();
-        })
-        .then(datos => {
-            // insertamos el codigo HTML dentro del contenedor principal
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
 }
 function cargarModuloArmazonesReporte()
 {

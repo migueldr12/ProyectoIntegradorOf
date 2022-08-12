@@ -6,7 +6,10 @@ function alertaAgregar()
         confirmButtonText: 'Aceptar'
     });
 }
-
+function alertaEnProceso()
+{
+    Swal.fire('Apartado en proceso', 'Estamos trabajando en ello', "info");
+}
 function alertaModificar()
 {
     Swal.fire({

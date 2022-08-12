@@ -52,6 +52,11 @@ export function inicializar()
     setDetalleVisible(false);
     fillTable();
 }
+export function inicializarAgregar()
+{
+    setDetalleVisible(true);
+    fillTable();
+}
 function fillTable()
 {
     let contenido = '';
@@ -61,14 +66,9 @@ function fillTable()
         contenido += '<tr>' +
                             '<td>' + armazones[i].nombre + '</td>' +
                             '<td>' + armazones[i].marca + '</td>' +
-                            '<td>' + armazones[i].modelo + '</td>' +
-                            '<td>' + armazones[i].color + '</td>' +
-                            '<td>' + armazones[i].dimensiones + '</td>' +
                             '<td>' + armazones[i].precioCompra + '</td>' +
                             '<td>' + armazones[i].precioVenta + '</td>' +
-                            '<td>' + armazones[i].existencias + '</td>' +
-                            '<td>' + armazones[i].estatus + '</td>' +
-                            '<td>' + armazones[i].descripcion + '</td>' +           //Cambiar a id armazon
+                            '<td>' + armazones[i].existencias + '</td>' +           //Cambiar a id armazon
                             '<td><a href = "#" onclick="cm.mostrarDetalleArmazon(' + armazones[i].idArmazon + ');">Ver detalle</a>' +
                      '</tr>'
     }
@@ -253,5 +253,6 @@ export function limpiar_y_mostrar_detalle()
     limpiarFormularioDetalle();
     setDetalleVisible(true);
 }
+
  
 
