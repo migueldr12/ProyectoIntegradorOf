@@ -252,12 +252,19 @@ function cargarModuloLentesContacto()
 function cargarModuloAgregarLentesContacto()
 {
     fetch('lentesContacto/agregarLentesContacto.html')
-        .then(respuesta => {
+    .then(respuesta => {
             return respuesta.text();
         })
-        .then(datos => {
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./lentesContacto.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializarAgregar();
+                        });
+                    });
 }
 
 function cargarModuloBuscarLentesContacto()
@@ -369,24 +376,38 @@ function cargarModuloClienteReporte()
 
 function cargarModuloEmpleado()
 {
-    fetch('empleados/empleadoPrincipal.html')
-        .then(respuesta => {
+    fetch('empleados/agregarEmpleados.html')
+    .then(respuesta => {
             return respuesta.text();
         })
-        .then(datos => {
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./empleados.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializar();
+                        });
+                    });
 }
 
 function cargarModuloEmpleadoAgregar()
 {
-    fetch('empleados/agregarEmpleado.html')
-        .then(respuesta => {
+    fetch('empleados/agregarEmpleados.html')
+    .then(respuesta => {
             return respuesta.text();
         })
-        .then(datos => {
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./empleados.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializarAgregar();
+                        });
+                    });
 }
 
 function cargarModuloEmpleadoBuscar()
