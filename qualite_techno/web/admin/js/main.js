@@ -36,30 +36,6 @@ function cargarModuloSolucionesAgregar()
                     });
 }
 
-function cargarModuloSolucionBuscar()
-{
-    fetch('soluciones/buscarSolucion.html')
-        .then(respuesta => {
-            return respuesta.text();
-        })
-        .then(datos => {
-            // insertamos el codigo HTML dentro del contenedor principal
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
-}
-
-function cargarModuloSolucionModificar()
-{
-    fetch('soluciones/modificarSolucion.html')
-        .then(respuesta => {
-            return respuesta.text();
-        })
-        .then(datos => {
-            // insertamos el codigo HTML dentro del contenedor principal
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
-}
-
 function cargarModuloSolucionReporte()
 {
     fetch('soluciones/reporteSolucion.html')
@@ -71,8 +47,6 @@ function cargarModuloSolucionReporte()
             document.getElementById('contenedor_principal').innerHTML = datos;
         });
 }
-
-
 //TRATAMIENTOS
 
 function cargarModuloTratamientos()
