@@ -230,7 +230,7 @@ export function eliminarArmazon()
     if(document.getElementById("txtCodigoDeBarras").value !== '')
     {
         //Buscamos la posicion del accesorio
-        pos = buscarPosiconPorId(parseInt(document.getElementById("txtCodigoDeBarras").value)); //Que reciba el codigo
+        pos = buscarPosiconPorId(parseInt(document.getElementById("txtIdArmazon").value)); //Que reciba el codigo
         
         if(pos >= 0)
         {
