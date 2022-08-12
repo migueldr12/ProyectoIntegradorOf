@@ -2,75 +2,92 @@
     <div class="col-12" id="divDetalleArmazones">
         <div class="card">
             <div class="card-header head-main">
-                <h2 class="head-main">Agregar armazones<a onclick="cm.setDetalleVisible(false);"><svg class="cierre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/></svg></a></h2> 
+                <h2 class="head-main">Armazón<a onclick="cm.setDetalleVisible(false);"><svg class="cierre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/></svg></a></h2> 
             </div>
             <div class="card-body">
                 <form class="m-4">
-                    <div class="row">
+                    <div class="row mb-4">
+                        <div class="col-4">
+                            <div class=" form-floating">
+                                <input type="text" id="txtIdProducto" class="form-control"readonly placeholder="">
+                                <label for="txtIdProducto">Id del producto:</label>                                
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class=" form-floating">
+                                <input type="text" id="txtIdArmazon" class="form-control"readonly placeholder="">
+                                <label for="txtIdArmazon">Id del armazon:</label>                                
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class=" form-floating">
+                                <input type="text" id="txtCodigoDeBarras" class=" form-control" readonly placeholder="">
+                                <label for="txtCodigoDeBarras">C&oacute;digo de barras:</label>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
                         <div class="col-6">
-                            <div class="row pb-4 text-center">
-                                <label for="txtIdProducto" class="form-label w-50">Id del producto</label>
-                                <input type="text" id="txtIdProducto" class="form-control w-50"readonly>
+                            <div class="pb-2 form-floating ">
+                                <input type="text" id="txtNombre" class=" form-control " placeholder=""/>
+                                <label for="txtNombre">Nombre:</label>
                             </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtIdArmazon" class="form-label w-50">Id del armazon</label>
-                                <input type="text" id="txtIdArmazon" class="form-control w-50"readonly>
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtMarca" class="form-control" placeholder="">
+                                <label for="txtMarca">Marca:</label>                                
                             </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtCodigoDeBarras" class="form-label w-50">C&oacute;digo de barras</label>
-                                <input type="text" id="txtCodigoDeBarras" readonly class=" form-control w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtNombre" class="form-label w-50">Nombre:</label>
-                                <input type="text" id="txtNombre" class=" form-control w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtMarca" class="form-label w-50">Marca:</label>
-                                <input type="text" id="txtMarca" class="form-control w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtModelo" class="form-label w-50">Modelo:</label>
-                                <input type="text" id="txtModelo" class="form-control w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtColor" class="form-label w-50">Color:</label>
-                                <input type="text" id="txtColor" class="form-control w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtDimensiones" class="form-label w-50">Dimensiones:</label>
-                                <input type="text" id="txtDimensiones" class="form-control w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtPrecioCompra" class="form-label w-50">Precio compra:</label>
-                                <input type="text" id="txtPrecioCompra" class="form-control w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtPrecioVenta" class="form-label w-50">Precio venta:</label>
-                                <input type="text" id="txtPrecioVenta" class="form-control w-50">
-                            </div>
-                            <div class="row pb-4 text-center">
-                                <label for="txtExistencias" class="form-label w-50">Existencias:</label>
-                                <input type="text" id="txtExistencias" class="form-control w-50">
+                            <div class="pb-2 form-floating">
+                                <input type ="text" id="txtModelo" class="form-control" placeholder="">
+                                <label for="txtModelo">Modelo:</label>                                
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class=" row ps-4 mb-3">
-                                <label for="fotografia" class="form-label">Fotografia</label>
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtColor" class="form-control " placeholder="">
+                                <label for="txtColor">Color:</label>                                
+                            </div>
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtDimensiones" class="form-control " placeholder="">
+                                <label for="txtDimensiones">Dimensiones:</label>                                
+                            </div>
+                            <div class="pb-2 form-floating">                                
+                                <textarea id="txtDescripcion" class="form-control" placeholder=""></textarea>
+                                <label for="txtDescripcion">Descripci&oacute;n:</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtPrecioCompra" class="form-control" placeholder="">
+                                <label for="txtPrecioCompra">Precio compra:</label>                                
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtPrecioVenta" class="form-control" placeholder="">
+                                <label for="txtPrecioVenta">Precio venta:</label>                                
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="pb-2 form-floating">
+                                <input type="text" id="txtExistencias" class="form-control" placeholder="">
+                                <label for="txtExistencias">Existencias:</label>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div class="">
+                                <label for="fotografia" class="form-label">Fotografia:</label>
                                 <input class="form-control" type="file" id="fotografia">
                             </div>
-                            <div class="row ps-4">
-                                <label for="txtDescripcion" class="form-label w-50">Descripci&oacute;n</label>
-                            </div>
-                            <div class="row ps-4 pt-2">
-                                <textarea id="txtDescripcion" class="form-control" ></textarea>
-                            </div>
-                            <br><br><br><br>
-                            <div class="row mt-lg-5 justify-content-center">
-                                <button type="button" class="btn btn-primary w-25 m-1" onclick="cm.agregarArmazon();" id="btnAgregar"><i class="fa-solid fa-floppy-disk me-1"></i></i>Guardar</button>
-                                <button type="button" class="btn btn-success w-25 m-1" onclick="cm.limpiarFormularioDetalle();" id="btnLimpiar" ><i class="fa-solid fa-arrows-spin me-1"></i>Nuevo</button>
-                                <button type="button" class="btn btn-danger w-25 m-1" onclick="cm.eliminarArmazon();" id="btnEliminar"><i class="fa-solid fa-trash me-1"></i>Eliminar</button>
-                            </div>
                         </div>
+                    </div>
+                    <div class="row mt-5 justify-content-center">
+                        <button type="button" class="btn btn-primary w-auto  m-1" onclick="cm.agregarArmazon();" id="btnAgregar"><i class="fa-solid fa-floppy-disk me-1"></i></i>Guardar</button>
+                        <button type="button" class="btn btn-success w-auto m-1" onclick="cm.limpiarFormularioDetalle();" id="btnLimpiar" ><i class="fa-solid fa-arrows-spin me-1"></i>Nuevo</button>
+                        <button type="button" class="btn btn-danger w-auto m-1" onclick="cm.eliminarArmazon();" id="btnEliminar"><i class="fa-solid fa-trash me-1"></i>Eliminar</button>
                     </div>
                 </form>
             </div>
