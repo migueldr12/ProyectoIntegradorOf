@@ -114,25 +114,39 @@ function cargarModuloTratamientoReporte()
 
 function cargarModuloAccesorio()
 {
-    fetch('accesorios/principalAccesorios.html')
-            .then(respuesta => {
-                return respuesta.text();
-            })
-            .then(datos => {
-                document.getElementById('contenedor_principal').innerHTML = datos;
-            });
+    fetch('accesorios/agregarAccesorio.html')
+    .then(respuesta => {
+            return respuesta.text();
+        })
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./accesorios.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializar();
+                        });
+                    });
 }
     
 
 function cargarModuloAgregarAccesorio()
 {
     fetch('accesorios/agregarAccesorio.html')
-        .then(respuesta => {
+    .then(respuesta => {
             return respuesta.text();
         })
-        .then(datos => {
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./accesorios.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializarAgregar();
+                        });
+                    });
 }
 
 function cargarModuloBuscarAccesorio()
