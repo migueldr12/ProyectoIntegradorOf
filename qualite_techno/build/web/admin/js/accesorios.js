@@ -69,7 +69,7 @@ function fillTable()
                             '<td>' + accesorios[i].existencias + '</td>' +
                             '<td>' + accesorios[i].estatus + '</td>' +
                             '<td>' + accesorios[i].descripcion + '</td>' +           //Cambiar a id armazon
-                            '<td><a href = "#" onclick="cm.mostrarDetalleArmazon(' + accesorios[i].idArmazon + ');">Ver detalle</a>' +
+                            '<td><a href = "#" onclick="cm.mostrarDetalleArmazon(' + accesorios[i].idAccesorio + ');">Ver detalle</a>' +
                      '</tr>'
     }
     document.getElementById('tbArmazones').innerHTML = contenido;

@@ -48,6 +48,13 @@ export function inicializar()
     setDetalleVisible(false);
     fillTable();
 }
+
+export function inicializarAgregar()
+{
+    setDetalleVisible(true);
+    fillTable();
+}
+
 function fillTable()
 {
     let contenido = '';
