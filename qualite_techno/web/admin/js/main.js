@@ -18,16 +18,22 @@ function cargarModuloSoluciones()
                     });
 }
 
-function cargarModuloSolucionAgregar()
+function cargarModuloSolucionesAgregar()
 {
     fetch('soluciones/agregarSolucion.html')
-        .then(respuesta => {
+    .then(respuesta => {
             return respuesta.text();
         })
-        .then(datos => {
-            // insertamos el codigo HTML dentro del contenedor principal
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./soluciones.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializarAgregar();
+                        });
+                    });
 }
 
 function cargarModuloSolucionBuscar()
