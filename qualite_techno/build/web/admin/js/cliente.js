@@ -104,9 +104,8 @@ export function mostrarDetalleCliente(idCliente)
             document.getElementById("txtApellidoPaterno").value = clientes[i].apellidoPaterno;
             document.getElementById("txtApellidoMaterno").value = clientes[i].apellidoMaterno;
             document.getElementById("txtGenero").value = clientes[i].genero;
-            document.getElementById("txtRfc").value =clientes[i].rfc;
+            document.getElementById("txtRfc").value =  clientes[i].rfc;
             document.getElementById("txtCorreo").value = clientes[i].correo;
-            document.getElementById("txtEstatus").value = clientes[i].estatus;
             document.getElementById("txtTelefonoDeCasa").value = clientes[i].telefonoDeCasa;
             document.getElementById("txtTelefonoMovil").value = clientes[i].telefonoMovil;
         
