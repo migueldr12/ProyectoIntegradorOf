@@ -151,8 +151,6 @@ export function buscarPosiconPorId(id)
 }
 export function agregarArmazon()
 {
-    //Limpiamos formulario
-    limpiarFormularioDetalle();
     //Declaramos una variable temporal para saber la posicion del armazon
     let pos = -1;
     
