@@ -233,13 +233,20 @@ function cargarModuloCatalogoMateriales()
 
 function cargarModuloLentesContacto()
 {
-    fetch('lentesContacto/principalLentesContacto.html')
-        .then(respuesta => {
+    fetch('lentesContacto/agregarLentesContacto.html')
+    .then(respuesta => {
             return respuesta.text();
         })
-        .then(datos => {
-            document.getElementById('contenedor_principal').innerHTML = datos;
-        });
+    .then(datos => {
+                        // insertamos el codigo HTML dentro del contenedor principal
+                        document.getElementById('contenedor_principal').innerHTML = datos;
+                        // Se agrego este import para cada modulo
+                        import('./lentesContacto.js')
+                        .then(obj => {
+                            cm = obj;
+                            cm.inicializar();
+                        });
+                    });
 }
 
 function cargarModuloAgregarLentesContacto()
