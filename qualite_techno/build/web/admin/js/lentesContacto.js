@@ -64,9 +64,12 @@ function fillTable()
         contenido += '<tr>' +
                             '<td>' + lentesContacto[i].nombre + '</td>' +
                             '<td>' + lentesContacto[i].marca + '</td>' +
+                            '<td>' + lentesContacto[i].color + '</td>' +
+                            '<td>' + lentesContacto[i].queratometria + '</td>' +
                             '<td>' + lentesContacto[i].precioCompra + '</td>' +
                             '<td>' + lentesContacto[i].precioVenta + '</td>' +
-                            '<td>' + lentesContacto[i].existencias + '</td>' +   //Cambiar a id armazon
+                            '<td>' + lentesContacto[i].existencias + '</td>' +
+                            '<td>' + lentesContacto[i].estatus + '</td>' +      //Cambiar a id armazon
                             '<td><a href = "#" onclick="cm.mostrarDetalleLentesContacto(' + lentesContacto[i].idLenteContacto + ');">Ver detalle</a>' +
                      '</tr>'
     }
