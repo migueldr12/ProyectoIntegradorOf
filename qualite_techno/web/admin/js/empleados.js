@@ -179,10 +179,13 @@ export function agregarEmpleado()
     {
         
         //Generamos un ID para el armazon a partir de los milisegundos 
-        //de la fecha actual
+        //de lacodigoApellidop fecha actual
+        let inicialesPaterno = empleado.apellidoPaterno.charAt(0) + empleado.apellidoPaterno.charAt(1);
+        let inicialesMaterno = empleado.apellidoMaterno.charAt(0);
+        empleado.codigoEmpleado = inicialesPaterno + inicialesMaterno + Date.now();
+        
         empleado.idPersona = Date.now();
         empleado.idEmpleado = Date.now() + 1 ;
-        empleado.codigoEmpleado = 'OQ-' + Date.now() + 2;
         
         //Insertamos el accesorio al final del arreglo
         empleados[empleados.length] = empleado;

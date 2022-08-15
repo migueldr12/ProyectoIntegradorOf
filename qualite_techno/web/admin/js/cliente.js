@@ -99,7 +99,7 @@ export function mostrarDetalleCliente(idCliente)
         //Llenamos el formulario con datos del armazon
             document.getElementById("txtIdPersona").value = clientes[i].idPersona;
             document.getElementById("txtIdCliente").value = clientes[i].idCliente;
-            document.getElementById("txtCodigoDeCliente").value = clientes[i].codigoDeClientes;
+            document.getElementById("txtCodigoDeCliente").value = clientes[i].codigoDeCliente;
             document.getElementById("txtNombre").value = clientes[i].nombre;
             document.getElementById("txtApellidoPaterno").value = clientes[i].apellidoPaterno;
             document.getElementById("txtApellidoMaterno").value = clientes[i].apellidoMaterno;
@@ -169,9 +169,12 @@ export function agregarCliente()
         
         //Generamos un ID para el armazon a partir de los milisegundos 
         //de la fecha actual
+        let inicialesPaterno = cliente.apellidoPaterno.charAt(0) + cliente.apellidoPaterno.charAt(1);
+        let inicialesMaterno = cliente.apellidoMaterno.charAt(0);
+        cliente.codigoDeCliente = inicialesPaterno + inicialesMaterno + Date.now();
         cliente.idPersona = Date.now();
         cliente.idCliente = Date.now() + 1 ;
-        cliente.codigoCliente = Date.now() + 1 ;
+        
         
         //Insertamos el accesorio al final del arreglo
         clientes[clientes.length] = cliente;
@@ -246,4 +249,43 @@ export function limpiar_y_mostrar_detalle()
 {
     limpiarFormularioDetalle();
     setDetalleVisible(true);
+}
+
+function alertaContrasena()
+{
+    Swal.fire({
+        icon: 'info',
+        html:
+                '<p>Para hacer una eliminación es necesario acceder con el usuario de un administrador.</p>'+
+                '<label for="user">Usuario:&nbsp;</label>'+
+                '<input id="user" type="text">'+
+                '<br><br>'+
+                '<label for="user">Contraseña:&nbsp;</label>'+
+                '<input id="password" type="password">',
+        showCancelButton: true,
+        cancelButtonColor: 'red',
+        confirmButtonText: 'Aceptar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+        Swal.fire({
+            icon: 'warning',
+            text: '¿Estás seguro que quieres eliminar este elemento?',
+            showCancelButton: true,
+            cancelButtonColor: 'red',
+            confirmButtonText: 'Aceptar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if(result.isConfirmed) {
+                Swal.fire(
+                    'Se eliminó con éxito',
+                    '',
+                    'success'
+                )
+            }
+        })
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info')
+      }
+    });
 }
