@@ -266,7 +266,6 @@ export function eliminarArmazon()
                 limpiarFormularioDetalle();
                 //Mostramos la tabla
                 setDetalleVisible(false);
-                )
         }
         })
         } else if (result.isDenied) {
@@ -282,52 +281,6 @@ export function limpiar_y_mostrar_detalle()
     setDetalleVisible(true);
 }
 
-function alertaContrasena()
-{
-    Swal.fire({
-        icon: 'info',
-        html:
-                '<p>Para hacer una eliminación es necesario acceder con el usuario de un administrador.</p>'+
-                '<label for="user">Usuario:&nbsp;</label>'+
-                '<input id="user" type="text">'+
-                '<br><br>'+
-                '<label for="user">Contraseña:&nbsp;</label>'+
-                '<input id="password" type="password">',
-        showCancelButton: true,
-        cancelButtonColor: 'red',
-        confirmButtonText: 'Aceptar',
-        cancelButtonText: 'Cancelar'
-    }).then((result) => {
-        if (result.isConfirmed) {
-        Swal.fire({
-            icon: 'warning',
-            text: '¿Estás seguro que quieres eliminar este elemento?',
-            showCancelButton: true,
-            cancelButtonColor: 'red',
-            confirmButtonText: 'Aceptar',
-            cancelButtonText: 'Cancelar'
-        }).then((result) => {
-            if(result.isConfirmed) {
-                //Removemos el armazon de la posicion encontrada
-                    armazones.splice(pos, 1);
 
-                    //Mostramos un mensaje de notificacion al usuario
-                    Swal.fire('Registro eliminado correctamente', '', "success");
-
-                    //Actualizamos la tabla
-                    fillTable();
-                    //Limpiamos el formulario
-                    limpiarFormularioDetalle();
-
-                    //Mostramos la tabla
-                    setDetalleVisible(false);
-                )
-            }
-        })
-      } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info')
-      }
-    });
-}
  
 
