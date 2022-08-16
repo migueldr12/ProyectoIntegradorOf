@@ -5,7 +5,7 @@ let lentesContacto =    [
                                 idProducto      : 1,
                                 idLenteContacto : 1,
                                 codigoDeBarras  : 1,
-                                nombre          : "Armazon de madera",
+                                nombre          : "Lentes blandos",
                                 marca           : "Gucci",
                                 color           : "Negro",
                                 queratometria   : "50x50",
@@ -18,7 +18,7 @@ let lentesContacto =    [
                                 idProducto      : 2,
                                 idLenteContacto : 2,
                                 codigoDeBarras  : 2,
-                                nombre          : "Armazon de pasta",
+                                nombre          : "Lentes de hidrogel",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
                                 color           : "Negro",
@@ -32,7 +32,7 @@ let lentesContacto =    [
                                 idProducto      : 3,
                                 idLenteContacto : 3,
                                 codigoDeBarras  : 3,
-                                nombre          : "Armazon de pasta",
+                                nombre          : "Lentes de PMMA",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
                                 color           : "Negro",
@@ -202,7 +202,7 @@ export function agregarLenteContacto()
             lentesContacto[pos] = lenteContacto;
             
             //Mostramos un mensaje al usuario
-            Swal.fire('Producto actualizado', 'Se actualizo correctamente el producto', "success");;
+            Swal.fire('Producto actualizado', 'Se actualizó correctamente el producto', "success");;
             
             //Actualizamos la tabla
             fillTable();

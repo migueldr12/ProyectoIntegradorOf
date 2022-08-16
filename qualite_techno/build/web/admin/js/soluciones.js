@@ -4,7 +4,7 @@ let soluciones =    [
                             {
                                 idProducto      : 36,
                                 idSolucion      : 1,
-                                nombre          : "Solucion de limpieza profunda",
+                                nombre          : "Solución de limpieza profunda",
                                 marca           : "CleanEX",
                                 precioCompra    : 50,
                                 precioVenta     : 200,
@@ -15,7 +15,7 @@ let soluciones =    [
                             {
                                 idProducto      : 48,
                                 idSolucion      : 2,
-                                nombre          : "Solucion para lentes de contacto",
+                                nombre          : "Solución para lentes de contacto",
                                 marca           : "BuenaVista",
                                 precioCompra    : 75,
                                 precioVenta     : 350,
@@ -26,7 +26,7 @@ let soluciones =    [
                             {
                                 idProducto      : 59,
                                 idSolucion      : 3,
-                                nombre          : "Solucion para lentes de contacto",
+                                nombre          : "Solución para lentes de contacto",
                                 marca           : "Madrex",
                                 precioCompra    : 25,
                                 precioVenta     : 100,
@@ -101,7 +101,7 @@ export function mostrarDetalleSolucion(idProducto)
         document.getElementById("btnEliminar").classList.remove("disabled");
     }
     else
-        Swal.fire('Solucion no encontrada','',"warning");
+        Swal.fire('Solución no encontrada','',"warning");
 }
 export function limpiarFormularioDetalle()
 {
@@ -163,7 +163,7 @@ export function agregarSolucion()
         document.getElementById("txtIdSolucion").value = solucion.idSolucion;
         
         //Mostramos un mensaje al usuario
-        Swal.fire('Datos de la solucion agregados correctamente', '', "success");
+        Swal.fire('Datos de la solución agregados correctamente', '', "success");
         
         //Actualizamos la tabla
         fillTable();
@@ -183,14 +183,14 @@ export function agregarSolucion()
             soluciones[pos] = solucion;
             
             //Mostramos un mensaje al usuario
-            Swal.fire('Producto actualizado', 'Se actualizo correctamente el producto', "success");;
+            Swal.fire('Producto actualizado', 'Se actualizó correctamente el producto', "success");;
             
             //Actualizamos la tabla
             fillTable();
         }
         else
         {
-            Swal.fire('Error: solucion no encontrado', '', "warning");
+            Swal.fire('Error: solución no encontrado', '', "warning");
         }
     }
         

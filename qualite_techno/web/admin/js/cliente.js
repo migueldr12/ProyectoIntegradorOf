@@ -207,7 +207,7 @@ export function agregarCliente()
             clientes[pos] = cliente;
             
             //Mostramos un mensaje al usuario
-            Swal.fire('Cliente actualizado', 'Se actualizo correctamente el cliente', "success");;
+            Swal.fire('Cliente actualizado', 'Se actualizó correctamente el cliente', "success");;
             
             //Actualizamos la tabla
             fillTable();

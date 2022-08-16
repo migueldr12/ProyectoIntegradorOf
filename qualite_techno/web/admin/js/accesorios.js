@@ -177,7 +177,7 @@ export function agregarAccesorio()
             accesorios[pos] = accesorio;
             
             //Mostramos un mensaje al usuario
-            Swal.fire('Producto actualizado', 'Se actualizo correctamente el producto', "success");;
+            Swal.fire('Producto actualizado', 'Se actualizó correctamente el producto', "success");;
             
             //Actualizamos la tabla
             fillTable();

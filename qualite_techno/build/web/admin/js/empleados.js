@@ -218,7 +218,7 @@ export function agregarEmpleado()
             empleados[pos] = empleado;
             
             //Mostramos un mensaje al usuario
-            Swal.fire('Empleado actualizado', 'Se actualizo correctamente el empleado', "success");;
+            Swal.fire('Empleado actualizado', 'Se actualizó correctamente el empleado', "success");;
             
             //Actualizamos la tabla
             fillTable();
