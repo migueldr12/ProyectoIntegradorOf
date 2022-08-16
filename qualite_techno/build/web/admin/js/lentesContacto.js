@@ -88,19 +88,18 @@ export function setDetalleVisible(valor)
 export function mostrarDetalleLentesContacto(idProducto)
 {
     let i = -1;
-    
+
     //Buscamos la posicion del Armazon
     i = buscarPosiconPorId(idProducto);
-    
+
     if(i >= 0)
     {
         //Abrimos el detalle de armazones
         setDetalleVisible(true);
-        
+
         //Llenamos el formulario con datos del armazon
         document.getElementById("txtIdProducto").value = lentesContacto[i].idProducto;
         document.getElementById("txtIdLenteContacto").value = lentesContacto[i].idLenteContacto;
-        document.getElementById("txtCodigoDeBarras").value = 'OQ-' + lentesContacto[i].codigoDeBarras;
         document.getElementById("txtNombre").value = lentesContacto[i].nombre;
         document.getElementById("txtMarca").value = lentesContacto[i].marca;
         document.getElementById("txtColor").value = lentesContacto[i].color;
@@ -108,7 +107,7 @@ export function mostrarDetalleLentesContacto(idProducto)
         document.getElementById("txtPrecioCompra").value = lentesContacto[i].precioCompra;
         document.getElementById("txtPrecioVenta").value = lentesContacto[i].precioVenta;
         document.getElementById("txtExistencias").value = lentesContacto[i].existencias;
-        
+
         //Activamos el boton de eliminar
         document.getElementById("btnEliminar").classList.remove("disabled");
     }
@@ -119,7 +118,6 @@ export function limpiarFormularioDetalle()
 {
     document.getElementById("txtIdProducto").value = "";
     document.getElementById("txtIdLenteContacto").value = "";
-    document.getElementById("txtCodigoDeBarras").value = "";
     document.getElementById("txtNombre").value = "";
     document.getElementById("txtMarca").value = "";
     document.getElementById("txtColor").value = "";
@@ -130,31 +128,30 @@ export function limpiarFormularioDetalle()
 }
 export function buscarPosiconPorId(id)
 {
-    //Se hace la busqueda de la posicion de un armazon 
+    //Se hace la busqueda de la posicion de un armazon
     //Buscamos la posicion de accesorios con base en el idArmazones
-    
+
     for(let i = 0; i < lentesContacto.length; i++)
     {
-        // Comparamos si el id del del armazon en la posicion actual es igual 
+        // Comparamos si el id del del armazon en la posicion actual es igual
         // al id de lo que son pasa por parametro
         if(lentesContacto[i].idLenteContacto === id)
             return i;
     }
-        //Si llegamos hasta aqui significa que no encontramos el id buscamos el 
+        //Si llegamos hasta aqui significa que no encontramos el id buscamos el
     return -1;
 }
 export function agregarLenteContacto()
 {
     //Declaramos una variable temporal para saber la posicion del armazon
     let pos = -1;
-    
+
     //Definimos artributos y valores del accesorio
     let lenteContacto =   {
                         idProducto : 0,
                         idLenteContacto : 0,
-                        codigoDeBarras : 0,
                         nombre : document.getElementById("txtNombre").value,
-                        marca : document.getElementById("txtMarca").value,    
+                        marca : document.getElementById("txtMarca").value,
                         color : document.getElementById("txtColor").value,
                         queratometria : document.getElementById("txtQueratometria").value,
                         precioCompra : parseFloat(document.getElementById("txtPrecioCompra").value),
@@ -164,25 +161,23 @@ export function agregarLenteContacto()
                     };
     if(document.getElementById("txtCodigoDeBarras").value.trim() === '')
     {
-        
-        //Generamos un ID para el armazon a partir de los milisegundos 
+
+        //Generamos un ID para el armazon a partir de los milisegundos
         //de la fecha actual
         lenteContacto.idProducto = Date.now();
         lenteContacto.idLenteContacto = Date.now() + 1 ;
-        lenteContacto.codigoDeBarras = 'OQ-' + Date.now() + 2;
-        
+
         //Insertamos el accesorio al final del arreglo
         lentesContacto[lentesContacto.length] = lenteContacto;
-        
-        //Colocamos los IDs generados en las cajas de textos para 
+
+        //Colocamos los IDs generados en las cajas de textos para
         //evitar duplicados
         document.getElementById("txtIdProducto").value = lenteContacto.idProducto;
-        document.getElementById("txtCodigoDeBarras").value = lenteContacto.codigoDeBarras;
         document.getElementById("txtIdLenteContacto").value = lenteContacto.idLenteContacto;
-        
+
         //Mostramos un mensaje al usuario
         Swal.fire('Datos del Lente de Contacto agregados correctamente', '', "success");
-        
+
         //Actualizamos la tabla
         fillTable();
     }
@@ -191,19 +186,18 @@ export function agregarLenteContacto()
         //Si el armazon ya tiene un ID, lo tomamos para actualizar sus datos:
         lenteContacto.idProducto = parseInt(document.getElementById("txtIdProducto").value);
         lenteContacto.idLenteContacto = parseInt(document.getElementById("txtIdLenteContacto").value);
-        lenteContacto.codigoDeBarras = parseInt(document.getElementById("txtCodigoDeBarras").value);
-        
+
         //Buscamos la posicion del objeto
         pos = buscarPosiconPorId(lenteContacto.idLenteContacto);
-        
+
         if(pos >= 0)
         {
             //Reemplazamos el objeto en la posicion encontrada
             lentesContacto[pos] = lenteContacto;
-            
+
             //Mostramos un mensaje al usuario
             Swal.fire('Producto actualizado', 'Se actualizó correctamente el producto', "success");;
-            
+
             //Actualizamos la tabla
             fillTable();
         }
@@ -212,29 +206,29 @@ export function agregarLenteContacto()
             Swal.fire('Error: lente de contacto no encontrado', '', "warning");
         }
     }
-        
+
 }
 export function eliminarLenteContacto()
 {
     let pos = -1;
-    if(document.getElementById("txtCodigoDeBarras").value !== '')
+    if(document.getElementById("txtIdLenteContacto").value !== '')
     {
         //Buscamos la posicion del accesorio
         pos = buscarPosiconPorId(parseInt(document.getElementById("txtIdLenteContacto").value)); //Que reciba el codigo
-        
+
         if(pos >= 0)
         {
             //Removemos el armazon de la posicion encontrada
             lentesContacto.splice(pos, 1);
-            
+
             //Mostramos un mensaje de notificacion al usuario
             Swal.fire('Registro eliminado correctamente', '', "success");
-            
+
             //Actualizamos la tabla
             fillTable();
             //Limpiamos el formulario
             limpiarFormularioDetalle();
-            
+
             //Mostramos la tabla
             setDetalleVisible(false);
         }
@@ -245,5 +239,3 @@ export function limpiar_y_mostrar_detalle()
     limpiarFormularioDetalle();
     setDetalleVisible(true);
 }
- 
-
