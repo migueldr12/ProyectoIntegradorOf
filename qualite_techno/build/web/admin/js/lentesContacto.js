@@ -4,7 +4,6 @@ let lentesContacto =    [
                             {
                                 idProducto      : 1,
                                 idLenteContacto : 1,
-                                codigoDeBarras  : 1,
                                 nombre          : "Armazon de madera",
                                 marca           : "Gucci",
                                 color           : "Negro",
@@ -17,7 +16,6 @@ let lentesContacto =    [
                             {
                                 idProducto      : 2,
                                 idLenteContacto : 2,
-                                codigoDeBarras  : 2,
                                 nombre          : "Armazon de pasta",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -31,7 +29,6 @@ let lentesContacto =    [
                             {
                                 idProducto      : 3,
                                 idLenteContacto : 3,
-                                codigoDeBarras  : 3,
                                 nombre          : "Armazon de pasta",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -100,7 +97,6 @@ export function mostrarDetalleLentesContacto(idProducto)
         //Llenamos el formulario con datos del armazon
         document.getElementById("txtIdProducto").value = lentesContacto[i].idProducto;
         document.getElementById("txtIdLenteContacto").value = lentesContacto[i].idLenteContacto;
-        document.getElementById("txtCodigoDeBarras").value = 'OQ-' + lentesContacto[i].codigoDeBarras;
         document.getElementById("txtNombre").value = lentesContacto[i].nombre;
         document.getElementById("txtMarca").value = lentesContacto[i].marca;
         document.getElementById("txtColor").value = lentesContacto[i].color;
@@ -119,7 +115,6 @@ export function limpiarFormularioDetalle()
 {
     document.getElementById("txtIdProducto").value = "";
     document.getElementById("txtIdLenteContacto").value = "";
-    document.getElementById("txtCodigoDeBarras").value = "";
     document.getElementById("txtNombre").value = "";
     document.getElementById("txtMarca").value = "";
     document.getElementById("txtColor").value = "";
@@ -152,7 +147,6 @@ export function agregarLenteContacto()
     let lenteContacto =   {
                         idProducto : 0,
                         idLenteContacto : 0,
-                        codigoDeBarras : 0,
                         nombre : document.getElementById("txtNombre").value,
                         marca : document.getElementById("txtMarca").value,    
                         color : document.getElementById("txtColor").value,
@@ -169,7 +163,6 @@ export function agregarLenteContacto()
         //de la fecha actual
         lenteContacto.idProducto = Date.now();
         lenteContacto.idLenteContacto = Date.now() + 1 ;
-        lenteContacto.codigoDeBarras = 'OQ-' + Date.now() + 2;
         
         //Insertamos el accesorio al final del arreglo
         lentesContacto[lentesContacto.length] = lenteContacto;
@@ -177,7 +170,6 @@ export function agregarLenteContacto()
         //Colocamos los IDs generados en las cajas de textos para 
         //evitar duplicados
         document.getElementById("txtIdProducto").value = lenteContacto.idProducto;
-        document.getElementById("txtCodigoDeBarras").value = lenteContacto.codigoDeBarras;
         document.getElementById("txtIdLenteContacto").value = lenteContacto.idLenteContacto;
         
         //Mostramos un mensaje al usuario
@@ -191,7 +183,6 @@ export function agregarLenteContacto()
         //Si el armazon ya tiene un ID, lo tomamos para actualizar sus datos:
         lenteContacto.idProducto = parseInt(document.getElementById("txtIdProducto").value);
         lenteContacto.idLenteContacto = parseInt(document.getElementById("txtIdLenteContacto").value);
-        lenteContacto.codigoDeBarras = parseInt(document.getElementById("txtCodigoDeBarras").value);
         
         //Buscamos la posicion del objeto
         pos = buscarPosiconPorId(lenteContacto.idLenteContacto);
@@ -217,7 +208,7 @@ export function agregarLenteContacto()
 export function eliminarLenteContacto()
 {
     let pos = -1;
-    if(document.getElementById("txtCodigoDeBarras").value !== '')
+    if(document.getElementById("txtIdLenteContacto").value !== '')
     {
         //Buscamos la posicion del accesorio
         pos = buscarPosiconPorId(parseInt(document.getElementById("txtIdLenteContacto").value)); //Que reciba el codigo
