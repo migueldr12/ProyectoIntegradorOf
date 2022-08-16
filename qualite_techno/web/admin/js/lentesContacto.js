@@ -4,7 +4,6 @@ let lentesContacto =    [
                             {
                                 idProducto      : 1,
                                 idLenteContacto : 1,
-                                codigoDeBarras  : 1,
                                 nombre          : "Lentes blandos",
                                 marca           : "Gucci",
                                 color           : "Negro",
@@ -17,7 +16,6 @@ let lentesContacto =    [
                             {
                                 idProducto      : 2,
                                 idLenteContacto : 2,
-                                codigoDeBarras  : 2,
                                 nombre          : "Lentes de hidrogel",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -31,7 +29,6 @@ let lentesContacto =    [
                             {
                                 idProducto      : 3,
                                 idLenteContacto : 3,
-                                codigoDeBarras  : 3,
                                 nombre          : "Lentes de PMMA",
                                 marca           : "Gucci",
                                 modelo          : "GU-89",
@@ -159,7 +156,7 @@ export function agregarLenteContacto()
                         existencias : parseFloat(document.getElementById("txtExistencias").value),
                         estatus : "Activo"
                     };
-    if(document.getElementById("txtCodigoDeBarras").value.trim() === '')
+    if(document.getElementById("txtIdLenteContacto").value.trim() === '')
     {
 
         //Generamos un ID para el armazon a partir de los milisegundos
