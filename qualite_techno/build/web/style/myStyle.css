@@ -3,11 +3,6 @@
     width: 120px;
     height: 120px;
 }
-.imgTxtLogo
-{
-    width: 120px;
-    height: 120px;
-}
 .contenidoPrincipal
 {
     background-color: #c9f0ff;
@@ -24,7 +19,7 @@
 {
     width: 100%;
     color:white;
-    font-size: 1vw;
+    font-size: 0.9vw;
 }
 
 
