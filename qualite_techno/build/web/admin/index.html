@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Menu principal</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,29 +16,20 @@
     </head>
     <body class="contenidoPrincipal">
         <div class="row">
-            <div class="col-12 text-center head">
-                <img class="imgLogo" src="../img/logo.png" alt="logo"><img class="imgTxtLogo" src="../img/letrasLogo.png" alt="letrasLogo">
-            </div>
-        </div>
-        <div class="row">
             <nav class="nav barra justify-content-center ">
-                <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="cargarModuloCliente();" id="dropdownMenuClientes" data-bs-toggle="dropdown"  aria-expanded="false" >
-                        <i class="fa-regular fa-id-card me-1"></i>Clientes
-                    </button>
-                    <div class="dropdown-content" aria-labelledby="dropdownMenuClientes">
-                        <a class="dropdown-item" href="#" onclick="cargarModuloClienteAgregar();">Agregar</a>
-                    </div>
+                <div class="col-1">
+                    
                 </div>
-                <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuVentas" data-bs-toggle="dropdown"  aria-expanded="false">
-                        <i class="fa-solid fa-receipt me-1"></i>Ventas
-                    </button> 
-                   <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuVentas">
-                        <a class="dropdown-item" href="#" onclick="alertaEnProceso();">Agregar</a>
-                        <a class="dropdown-item" href="#" onclick="alertaEnProceso();">Buscar</a>
-                        <a class="dropdown-item" href="#" onclick="alertaEnProceso();">Reporte</a>
+                <div class="col-11 text-center">
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" onclick="cargarModuloCliente();" id="dropdownMenuClientes" data-bs-toggle="dropdown"  aria-expanded="false" >
+                            <i class="fa-regular fa-id-card me-1"></i>Clientes
+                        </button>
+                        <div class="dropdown-content" aria-labelledby="dropdownMenuClientes">
+                            <a class="dropdown-item" href="#" onclick="cargarModuloClienteAgregar();">Agregar</a>
+                        </div>
                     </div>
+<<<<<<< Updated upstream
                     -->
                 </div>
                 <div class="dropdown">
@@ -96,70 +87,139 @@
                     </button>
                     <div class="dropdown-content" aria-labelledby="dropdownMenuEmpleados">
                         <a class="dropdown-item" href="#" onclick="cargarModuloEmpleadoAgregar();">Agregar</a>
+=======
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuVentas" data-bs-toggle="dropdown"  aria-expanded="false">
+                            <i class="fa-solid fa-receipt me-1"></i>Ventas
+                        </button> 
+                       <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuVentas">
+                            <a class="dropdown-item" href="#" onclick="alertaEnProceso();">Agregar</a>
+                            <a class="dropdown-item" href="#" onclick="alertaEnProceso();">Buscar</a>
+                            <a class="dropdown-item" href="#" onclick="alertaEnProceso();">Reporte</a>
+                        </div>
+                        -->
                     </div>
-                </div>
-                <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" id="dropdownMenuGraduacion" data-bs-toggle="dropdown"  aria-expanded="false" onclick="alertaEnProceso();" >
-                        <i class="fa-solid fa-arrows-to-eye me-1"></i>Graduaci&oacute;n
-                    </button>
-                   <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuGraduacion">
-                        <a class="dropdown-item" href="#">Agregar</a>
-                        <a class="dropdown-item" href="#">Buscar</a>
-                        <a class="dropdown-item" href="#">Cat&aacute;logo</a>
-                    </div> -->
-                </div>
-                <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();"  id="dropdownMenuPresupuesto" data-bs-toggle="dropdown"  aria-expanded="false">
-                        <i class="fa-solid fa-list-check me-1"></i>Presupuestos
-                    </button>
-                    <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuPresupuesto">
-                        <a class="dropdown-item" href="#" onclick="cargarModuloPresupuestoLentesArmazon();" >Lentes de armazon</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloPresupuestoLentesContacto();">Lentes de contacto</a>
-                    </div> -->
-                </div>
-                <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuTratamientos" data-bs-toggle="dropdown"  aria-expanded="false" >
-                        <i class="fa-brands fa-buffer me-1"></i>Tratamientos
-                    </button>
-                   <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuTratamientos">
-                        <a class="dropdown-item" href="#" onclick="cargarModuloTratamientoAgregar();">Agregar</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloTratamientoBuscar();">Buscar</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloTratamientoReporte();">Reporte</a>
-                    </div> -->
-                </div>
-                <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuExamen" data-bs-toggle="dropdown"  aria-expanded="false" >
-                        <i class="fa-solid fa-eye me-1"></i>Examen de la vista
-                    </button>
-                   <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuExamen">
-                        <a class="dropdown-item" href="#" onclick="cargarModuloExamenAgregar();">Agregar</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloExamenBuscar();">Buscar</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloExamenReporte();">Reporte</a>
-                    </div> -->
-                </div>
-                <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" id="dropdownMenuCompra" data-bs-toggle="dropdown"  aria-expanded="false" onclick="alertaEnProceso();" >
-                        <i class="fa-solid fa-basket-shopping me-1"></i>Compras
-                    </button>
-                    <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuCompra">
-                        <a class="dropdown-item" href="#">Agregar</a>
-                        <a class="dropdown-item" href="#">Buscar</a>
-                        <a class="dropdown-item" href="#">Cat&aacute;logo</a>
-                    </div> -->
-                </div>
-                <div class="dropdown">
-                    <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuPago" data-bs-toggle="dropdown"  aria-expanded="false" >
-                        <i class="fa-solid fa-money-bills me-1"></i>Pagos
-                    </button>
-                    <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuPago">
-                        <a class="dropdown-item" href="#" onclick="cargarModuloPagosAgregar();">Agregar</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloPagosModificar();">Modificar</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloPagosEliminar();">Eliminar</a>
-                        <a class="dropdown-item" href="#" onclick="cargarModuloPagosReporte();">Reporte</a>
-                    </div> -->
-                </div>
-                <div>
-                    <p>&nbsp;</p>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuMateriales" data-bs-toggle="dropdown"  aria-expanded="false" >
+                            <i class="fa-solid fa-shapes me-1"></i>Materiales
+                        </button>
+                       <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuMateriales">
+                            <a class="dropdown-item" href="#" onclick="cargarModuloAgregarMaterial();">Agregar</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloBuscarMaterial();">Buscar</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloCatalogoMateriales()">Cat&aacute;logo</a>
+                        </div> -->
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra"  id="dropdownMenuProducto" data-bs-toggle="dropdown"  aria-expanded="false" >
+                            <i class="fa-solid fa-glasses me-1"></i>Productos
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuProducto">
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="cargarModuloArmazones();"><i class="fa-solid fa-glasses me-1"></i>Armazones</a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#" onclick="cargarModuloArmazonesAgregar();">Agregar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="cargarModuloAccesorio();"><i class="fa-solid fa-tag me-1"></i>Accesorios</a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#" onclick="cargarModuloAgregarAccesorio();">Agregar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="cargarModuloLentesContacto();"><i class="fa-solid fa-circle-dot me-1"></i>Lentes de contácto</a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#" onclick="cargarModuloAgregarLentesContacto()">Agregar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="cargarModuloSoluciones();"><i class="fa-solid fa-eye-dropper me-1"></i>Soluciones</a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#" onclick="cargarModuloSolucionesAgregar();">Agregar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" onclick="cargarModuloEmpleado();" id="dropdownMenuEmpleados" data-bs-toggle="dropdown"  aria-expanded="false" >
+                           <i class="fa-solid fa-user me-1"></i>Empleados
+                        </button>
+                        <div class="dropdown-content" aria-labelledby="dropdownMenuEmpleados">
+                            <a class="dropdown-item" href="#" onclick="cargarModuloEmpleadoAgregar();">Agregar</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" id="dropdownMenuGraduacion" data-bs-toggle="dropdown"  aria-expanded="false" onclick="alertaEnProceso();" >
+                            <i class="fa-solid fa-arrows-to-eye me-1"></i>Graduaci&oacute;n
+                        </button>
+                       <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuGraduacion">
+                            <a class="dropdown-item" href="#">Agregar</a>
+                            <a class="dropdown-item" href="#">Buscar</a>
+                            <a class="dropdown-item" href="#">Cat&aacute;logo</a>
+                        </div> -->
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();"  id="dropdownMenuPresupuesto" data-bs-toggle="dropdown"  aria-expanded="false">
+                            <i class="fa-solid fa-list-check me-1"></i>Presupuestos
+                        </button>
+                        <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuPresupuesto">
+                            <a class="dropdown-item" href="#" onclick="cargarModuloPresupuestoLentesArmazon();" >Lentes de armazon</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloPresupuestoLentesContacto();">Lentes de contacto</a>
+                        </div> -->
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuTratamientos" data-bs-toggle="dropdown"  aria-expanded="false" >
+                            <i class="fa-brands fa-buffer me-1"></i>Tratamientos
+                        </button>
+                       <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuTratamientos">
+                            <a class="dropdown-item" href="#" onclick="cargarModuloTratamientoAgregar();">Agregar</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloTratamientoBuscar();">Buscar</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloTratamientoReporte();">Reporte</a>
+                        </div> -->
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuExamen" data-bs-toggle="dropdown"  aria-expanded="false" >
+                            <i class="fa-solid fa-eye me-1"></i>Examen de la vista
+                        </button>
+                       <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuExamen">
+                            <a class="dropdown-item" href="#" onclick="cargarModuloExamenAgregar();">Agregar</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloExamenBuscar();">Buscar</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloExamenReporte();">Reporte</a>
+                        </div> -->
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" id="dropdownMenuCompra" data-bs-toggle="dropdown"  aria-expanded="false" onclick="alertaEnProceso();" >
+                            <i class="fa-solid fa-basket-shopping me-1"></i>Compras
+                        </button>
+                        <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuCompra">
+                            <a class="dropdown-item" href="#">Agregar</a>
+                            <a class="dropdown-item" href="#">Buscar</a>
+                            <a class="dropdown-item" href="#">Cat&aacute;logo</a>
+                        </div> -->
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle boton-barra" onclick="alertaEnProceso();" id="dropdownMenuPago" data-bs-toggle="dropdown"  aria-expanded="false" >
+                            <i class="fa-solid fa-money-bills me-1"></i>Pagos
+                        </button>
+                        <!-- <div class="dropdown-content" aria-labelledby="dropdownMenuPago">
+                            <a class="dropdown-item" href="#" onclick="cargarModuloPagosAgregar();">Agregar</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloPagosModificar();">Modificar</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloPagosEliminar();">Eliminar</a>
+                            <a class="dropdown-item" href="#" onclick="cargarModuloPagosReporte();">Reporte</a>
+                        </div> -->
+                    </div>
+                    <div>
+                        <p>&nbsp;</p>
+>>>>>>> Stashed changes
+                    </div>
                 </div>
             </nav>
             <div class="col-12 container-fluid w-100" id="contenedor_principal">
