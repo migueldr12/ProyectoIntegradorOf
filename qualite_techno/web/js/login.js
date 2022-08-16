@@ -4,7 +4,7 @@ function login()
 }
 function logout()
 {
-    window.location.replace('/qualite_techno/index.html');
+    window.location.replace('../qualite_techno/index.html');
 }
 
 
