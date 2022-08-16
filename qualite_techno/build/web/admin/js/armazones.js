@@ -275,6 +275,8 @@ export function eliminarArmazon()
         }
     }
 }
+
+
 export function limpiar_y_mostrar_detalle()
 {
     limpiarFormularioDetalle();
